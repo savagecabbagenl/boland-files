@@ -59,25 +59,40 @@
       margin-bottom: 15px;
     }
     .ingredients-box {
-      float: right;
-      width: 40%;
-      margin-left: 15px;
       background: #dff0d8;
       border-color: #c1e2b3;
+      width: 45%;
+      float: right;
+      margin-left: 15px;
     }
     .nutrition-box {
-      clear: both;
       background: #fcf8e3;
       border-color: #faf2cc;
-    }
-    .clear {
       clear: both;
+    }
+    details {
+      margin-bottom: 20px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
     }
     ol, ul {
       padding-left: 20px;
     }
     .section {
       margin-bottom: 40px;
+    }
+    .grocery-list input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .grocery-list li {
+      margin-bottom: 5px;
+      list-style: none;
     }
     footer {
       text-align: center;
@@ -86,9 +101,10 @@
       padding: 20px;
     }
     @media (max-width: 600px) {
-      .ingredients-box, .nutrition-box {
+      .ingredients-box {
         width: 100%;
         float: none;
+        margin-left: 0;
       }
     }
   </style>
@@ -102,130 +118,146 @@
   <!-- Meal 1 -->
   <div class="container section">
     <h2>Meal 1: Grilled Lemon-Herb Chicken with Quinoa Tabbouleh</h2>
-    
-    <!-- Ingredients Box (Top Right) -->
-    <div class="ingredients-box">
-      <h3>Ingredients</h3>
-      <h4>For the Chicken</h4>
-      <ul>
-        <li>2 boneless, skinless chicken breasts (≈6–8 oz each)</li>
-        <li>2 tbsp extra-virgin olive oil</li>
-        <li>Juice of 1 lemon</li>
-        <li>2 garlic cloves, minced</li>
-        <li>1 tsp dried oregano</li>
-        <li>Salt & pepper, to taste</li>
-      </ul>
-      <h4>For the Quinoa Tabbouleh</h4>
-      <ul>
-        <li>1 cup quinoa, rinsed</li>
-        <li>2 cups water or low-sodium broth</li>
-        <li>1 cup cherry tomatoes, halved</li>
-        <li>1 medium cucumber, diced</li>
-        <li>½ red onion, finely chopped</li>
-        <li>1 cup fresh parsley, chopped</li>
-        <li>¼ cup fresh mint leaves, chopped</li>
-        <li>Juice of 1 lemon</li>
-        <li>2 tbsp extra-virgin olive oil</li>
-        <li>Salt & pepper, to taste</li>
-        <li>(Optional: ½ cup crumbled feta)</li>
-      </ul>
-    </div>
+    <!-- Collapsible Recipe -->
+    <details open>
+      <summary>Show/Hide Recipe Details</summary>
+      <!-- Ingredients Box -->
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>For the Chicken</h4>
+        <ul>
+          <li>2 boneless, skinless chicken breasts (≈6–8 oz each)</li>
+          <li>2 tbsp extra-virgin olive oil</li>
+          <li>Juice of 1 lemon</li>
+          <li>2 garlic cloves, minced</li>
+          <li>1 tsp dried oregano</li>
+          <li>Salt &amp; pepper, to taste</li>
+        </ul>
+        <h4>For the Quinoa Tabbouleh</h4>
+        <ul>
+          <li>1 cup quinoa, rinsed</li>
+          <li>2 cups water or low-sodium broth</li>
+          <li>1 cup cherry tomatoes, halved</li>
+          <li>1 medium cucumber, diced</li>
+          <li>½ red onion, finely chopped</li>
+          <li>1 cup fresh parsley, chopped</li>
+          <li>¼ cup fresh mint leaves, chopped</li>
+          <li>Juice of 1 lemon</li>
+          <li>2 tbsp extra-virgin olive oil</li>
+          <li>Salt &amp; pepper, to taste</li>
+          <li>(Optional: ½ cup crumbled feta)</li>
+        </ul>
+      </div>
 
-    <!-- Recipe Directions -->
-    <div>
-      <h3>Recipe Directions</h3>
-      <ol>
-        <li><strong>Marinate the Chicken:</strong> Whisk together olive oil, lemon juice, garlic, oregano, salt, and pepper. Coat the chicken and refrigerate for at least 30 minutes.</li>
-        <li><strong>Cook the Quinoa:</strong> Boil water or broth, add quinoa, reduce heat, cover, and simmer for 15 minutes until absorbed. Let cool.</li>
-        <li><strong>Prepare the Tabbouleh:</strong> In a bowl, combine quinoa, tomatoes, cucumber, red onion, parsley, and mint. Drizzle with lemon juice and olive oil, then season with salt and pepper. Optionally, stir in feta.</li>
-        <li><strong>Grill the Chicken:</strong> Grill on medium-high for 6–7 minutes per side until the chicken reaches 165°F (74°C). Let rest and slice.</li>
-        <li><strong>Serve:</strong> Plate the tabbouleh and top with the sliced chicken.</li>
-      </ol>
-    </div>
-    
-    <!-- Nutrition Box (Below Ingredients) -->
-    <div class="nutrition-box">
-      <h3>Nutritional Information (Per Serving)</h3>
-      <ul>
-        <li>Calories: ~500 kcal</li>
-        <li>Protein: ~40 g</li>
-        <li>Carbs: ~40 g</li>
-        <li>Fats: ~18 g</li>
-      </ul>
-    </div>
-    <div class="clear"></div>
+      <!-- Recipe Directions -->
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Marinate the Chicken:</strong> Whisk together olive oil, lemon juice, garlic, oregano, salt, and pepper. Coat the chicken and refrigerate for at least 30 minutes.</li>
+          <li><strong>Cook the Quinoa:</strong> Boil water or broth, add quinoa, reduce heat, cover, and simmer for 15 minutes until liquid is absorbed. Let cool.</li>
+          <li><strong>Prepare the Tabbouleh:</strong> In a bowl, combine quinoa, tomatoes, cucumber, red onion, parsley, and mint. Drizzle with lemon juice and olive oil; season with salt and pepper. Optionally stir in feta.</li>
+          <li><strong>Grill the Chicken:</strong> Grill on medium-high for 6–7 minutes per side until the chicken reaches 165°F (74°C). Let rest and slice.</li>
+          <li><strong>Serve:</strong> Plate the tabbouleh and top with the sliced chicken.</li>
+        </ol>
+      </div>
+      
+      <!-- Nutrition Box -->
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~500 kcal</li>
+          <li>Protein: ~40 g</li>
+          <li>Carbs: ~40 g</li>
+          <li>Fats: ~18 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
   </div>
 
   <!-- Meal 2 -->
   <div class="container section">
-    <h2>Meal 2: Baked Salmon with Olive-Caper Salsa & Roasted Mediterranean Vegetables</h2>
-    
-    <!-- Ingredients Box (Top Right) -->
-    <div class="ingredients-box">
-      <h3>Ingredients</h3>
-      <h4>For the Salmon</h4>
-      <ul>
-        <li>2 salmon fillets (≈6 oz each)</li>
-        <li>1 tbsp extra-virgin olive oil</li>
-        <li>Salt & pepper, to taste</li>
-        <li>2 lemon slices (plus extra juice if desired)</li>
-      </ul>
-      <h4>For the Olive-Caper Salsa</h4>
-      <ul>
-        <li>¼ cup pitted Kalamata olives, chopped</li>
-        <li>2 tbsp capers, drained and chopped</li>
-        <li>¼ small red onion, finely diced</li>
-        <li>2 tbsp fresh parsley, chopped</li>
-        <li>Juice of ½ lemon</li>
-        <li>1 tbsp extra-virgin olive oil</li>
-      </ul>
-      <h4>For the Vegetables</h4>
-      <ul>
-        <li>1 small eggplant, cubed</li>
-        <li>1 zucchini, half-moons</li>
-        <li>1 red bell pepper, chopped</li>
-        <li>1 cup cherry tomatoes</li>
-        <li>1 small red onion, wedges</li>
-        <li>2 garlic cloves, minced</li>
-        <li>2 tbsp extra-virgin olive oil</li>
-        <li>Salt, pepper, & dried oregano (or basil)</li>
-      </ul>
-    </div>
+    <h2>Meal 2: Baked Salmon with Olive-Caper Salsa &amp; Roasted Mediterranean Vegetables</h2>
+    <!-- Collapsible Recipe -->
+    <details open>
+      <summary>Show/Hide Recipe Details</summary>
+      <!-- Ingredients Box -->
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>For the Salmon</h4>
+        <ul>
+          <li>2 salmon fillets (≈6 oz each)</li>
+          <li>1 tbsp extra-virgin olive oil</li>
+          <li>Salt &amp; pepper, to taste</li>
+          <li>2 lemon slices (plus extra juice if desired)</li>
+        </ul>
+        <h4>For the Olive-Caper Salsa</h4>
+        <ul>
+          <li>¼ cup pitted Kalamata olives, chopped</li>
+          <li>2 tbsp capers, drained and chopped</li>
+          <li>¼ small red onion, finely diced</li>
+          <li>2 tbsp fresh parsley, chopped</li>
+          <li>Juice of ½ lemon</li>
+          <li>1 tbsp extra-virgin olive oil</li>
+        </ul>
+        <h4>For the Vegetables</h4>
+        <ul>
+          <li>1 small eggplant, cubed</li>
+          <li>1 zucchini, cut into half-moons</li>
+          <li>1 red bell pepper, chopped</li>
+          <li>1 cup cherry tomatoes</li>
+          <li>1 small red onion, cut into wedges</li>
+          <li>2 garlic cloves, minced</li>
+          <li>2 tbsp extra-virgin olive oil</li>
+          <li>Salt, pepper &amp; dried oregano (or basil)</li>
+        </ul>
+      </div>
 
-    <!-- Recipe Directions -->
-    <div>
-      <h3>Recipe Directions</h3>
-      <ol>
-        <li><strong>Preheat & Roast Vegetables:</strong> Preheat your oven to 425°F (220°C). Toss eggplant, zucchini, bell pepper, cherry tomatoes, red onion, and garlic with olive oil, salt, pepper, and oregano on a baking sheet. Roast for 25–30 minutes, stirring halfway.</li>
-        <li><strong>Bake the Salmon:</strong> Place salmon in a greased dish, drizzle with olive oil, season, and top with a lemon slice. Bake for 12–15 minutes until salmon flakes easily.</li>
-        <li><strong>Make the Salsa:</strong> In a bowl, mix olives, capers, red onion, parsley, lemon juice, and olive oil. Adjust seasoning as needed.</li>
-        <li><strong>Assemble:</strong> Spoon the salsa over the salmon and serve alongside the roasted vegetables.</li>
-      </ol>
-    </div>
-    
-    <!-- Nutrition Box (Below Ingredients) -->
-    <div class="nutrition-box">
-      <h3>Nutritional Information (Per Serving)</h3>
-      <ul>
-        <li>Calories: ~550 kcal</li>
-        <li>Protein: ~35 g</li>
-        <li>Carbs: ~30 g</li>
-        <li>Fats: ~30 g</li>
-      </ul>
-    </div>
-    <div class="clear"></div>
+      <!-- Recipe Directions -->
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Preheat &amp; Roast Vegetables:</strong> Preheat your oven to 425°F (220°C). Toss eggplant, zucchini, bell pepper, cherry tomatoes, red onion, and garlic with olive oil, salt, pepper, and oregano on a baking sheet. Roast for 25–30 minutes (stir halfway).</li>
+          <li><strong>Bake the Salmon:</strong> Place salmon in a greased dish, drizzle with olive oil, season, and top with a lemon slice. Bake for 12–15 minutes until salmon flakes easily.</li>
+          <li><strong>Make the Salsa:</strong> In a bowl, mix olives, capers, red onion, parsley, lemon juice, and olive oil. Adjust seasoning as needed.</li>
+          <li><strong>Assemble:</strong> Spoon the salsa over the salmon and serve with the roasted vegetables.</li>
+        </ol>
+      </div>
+      
+      <!-- Nutrition Box -->
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~550 kcal</li>
+          <li>Protein: ~35 g</li>
+          <li>Carbs: ~30 g</li>
+          <li>Fats: ~30 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
   </div>
 
   <!-- Grocery List Section -->
   <div class="container section">
     <h2>Grocery List</h2>
-    <ul>
-      <li><strong>Proteins:</strong> 2 chicken breasts; 2 salmon fillets</li>
-      <li><strong>Produce:</strong> 3 lemons; 4 garlic cloves; 1 small eggplant; 1 zucchini; 2 red bell peppers; 1–2 red onions; 2 cups cherry tomatoes; 1 medium cucumber; 1 cup fresh parsley; ¼ cup fresh mint leaves; (optional: extra basil/or oregano)</li>
-      <li><strong>Grains:</strong> 1 cup quinoa</li>
-      <li><strong>Pantry:</strong> Extra-virgin olive oil; Salt; Pepper; Dried oregano; Capers; ¼ cup pitted Kalamata olives</li>
-      <li><strong>Dairy (Optional):</strong> ½ cup crumbled feta cheese</li>
-      <li><strong>Broth (Optional):</strong> Low-sodium chicken/vegetable broth</li>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> 2 chicken breasts</label></li>
+      <li><label><input type="checkbox"> 2 salmon fillets</label></li>
+      <li><label><input type="checkbox"> 3 lemons</label></li>
+      <li><label><input type="checkbox"> 4 garlic cloves</label></li>
+      <li><label><input type="checkbox"> 1 small eggplant</label></li>
+      <li><label><input type="checkbox"> 1 zucchini</label></li>
+      <li><label><input type="checkbox"> 2 red bell peppers</label></li>
+      <li><label><input type="checkbox"> 1–2 red onions</label></li>
+      <li><label><input type="checkbox"> 2 cups cherry tomatoes</label></li>
+      <li><label><input type="checkbox"> 1 medium cucumber</label></li>
+      <li><label><input type="checkbox"> 1 cup fresh parsley</label></li>
+      <li><label><input type="checkbox"> ¼ cup fresh mint leaves</label></li>
+      <li><label><input type="checkbox"> 1 cup quinoa</label></li>
+      <li><label><input type="checkbox"> Extra-virgin olive oil, salt, pepper, dried oregano</label></li>
+      <li><label><input type="checkbox"> Capers &amp; ¼ cup pitted Kalamata olives</label></li>
+      <li><label><input type="checkbox"> (Optional: ½ cup crumbled feta cheese &amp; low-sodium broth)</label></li>
     </ul>
   </div>
 
