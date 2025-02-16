@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mediterranean Meal Plan</title>
+  <title>Mediterranean Meal Plan: Monday to Friday</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,6 +41,7 @@
       border-radius: 8px;
       position: relative;
       overflow: hidden;
+      margin-bottom: 40px;
     }
     h2, h3, h4 {
       font-family: 'Playfair Display', serif;
@@ -50,6 +51,9 @@
       margin-top: 0;
       border-bottom: 2px solid #eaeaea;
       padding-bottom: 10px;
+    }
+    .section-text {
+      margin-bottom: 15px;
     }
     .ingredients-box, .nutrition-box {
       border: 1px solid;
@@ -83,9 +87,6 @@
     ol, ul {
       padding-left: 20px;
     }
-    .section {
-      margin-bottom: 40px;
-    }
     .grocery-list input[type="checkbox"] {
       margin-right: 10px;
     }
@@ -111,28 +112,33 @@
 <body>
   <header>
     <h1>Mediterranean Meal Plan</h1>
-    <p>Delicious, healthy, and beautifully crafted recipes</p>
+    <p>Monday – Friday: Breakfast, Dinner (with leftovers for lunch), &amp; a Daily Snack</p>
   </header>
 
-  <!-- Meal 1 -->
-  <div class="container section">
-    <h2>Meal 1: Grilled Lemon-Herb Chicken with Quinoa Tabbouleh</h2>
-    <!-- Collapsible Recipe -->
-    <details open>
-      <summary>Show/Hide Recipe Details</summary>
+  <!-- Monday -->
+  <div class="container">
+    <h2>Monday</h2>
+    <div class="section-text">
+      <strong>Breakfast:</strong> Greek Yogurt Parfait layered with honey, walnuts, fresh berries, and granola.
+    </div>
+    <div class="section-text">
+      <strong>Snack:</strong> Veggie sticks (carrot &amp; celery) with a side of classic hummus.
+    </div>
+    <details>
+      <summary>Show/Hide Monday Dinner Recipe (Leftovers for Tuesday Lunch)</summary>
       <!-- Ingredients Box -->
       <div class="ingredients-box">
         <h3>Ingredients</h3>
-        <h4>For the Chicken</h4>
+        <h4>Baked Lemon-Herb Chicken</h4>
         <ul>
-          <li>2 boneless, skinless chicken breasts (≈6–8 oz each)</li>
+          <li>2 boneless, skinless chicken breasts (6–8 oz each)</li>
           <li>2 tbsp extra-virgin olive oil</li>
           <li>Juice of 1 lemon</li>
           <li>2 garlic cloves, minced</li>
           <li>1 tsp dried oregano</li>
           <li>Salt &amp; pepper, to taste</li>
         </ul>
-        <h4>For the Quinoa Tabbouleh</h4>
+        <h4>Quinoa Tabbouleh</h4>
         <ul>
           <li>1 cup quinoa, rinsed</li>
           <li>2 cups water or low-sodium broth</li>
@@ -140,26 +146,28 @@
           <li>1 medium cucumber, diced</li>
           <li>½ red onion, finely chopped</li>
           <li>1 cup fresh parsley, chopped</li>
-          <li>¼ cup fresh mint leaves, chopped</li>
+          <li>¼ cup fresh mint, chopped</li>
           <li>Juice of 1 lemon</li>
           <li>2 tbsp extra-virgin olive oil</li>
           <li>Salt &amp; pepper, to taste</li>
           <li>(Optional: ½ cup crumbled feta)</li>
         </ul>
+        <h4>Roasted Vegetables</h4>
+        <ul>
+          <li>Assorted seasonal vegetables (zucchini, bell pepper, eggplant), cubed</li>
+          <li>Olive oil, salt &amp; pepper</li>
+        </ul>
       </div>
-
       <!-- Recipe Directions -->
       <div>
         <h3>Recipe Directions</h3>
         <ol>
-          <li><strong>Marinate the Chicken:</strong> Whisk together olive oil, lemon juice, garlic, oregano, salt, and pepper. Coat the chicken and refrigerate for at least 30 minutes.</li>
-          <li><strong>Cook the Quinoa:</strong> Boil water or broth, add quinoa, reduce heat, cover, and simmer for 15 minutes until liquid is absorbed. Let cool.</li>
-          <li><strong>Prepare the Tabbouleh:</strong> In a bowl, combine quinoa, tomatoes, cucumber, red onion, parsley, and mint. Drizzle with lemon juice and olive oil; season with salt and pepper. Optionally stir in feta.</li>
-          <li><strong>Grill the Chicken:</strong> Grill on medium-high for 6–7 minutes per side until the chicken reaches 165°F (74°C). Let rest and slice.</li>
-          <li><strong>Serve:</strong> Plate the tabbouleh and top with the sliced chicken.</li>
+          <li><strong>Marinate &amp; Bake Chicken:</strong> Marinate the chicken in olive oil, lemon juice, garlic, oregano, salt, and pepper. Bake or grill until cooked through (165°F/74°C), then slice.</li>
+          <li><strong>Cook Quinoa &amp; Prepare Tabbouleh:</strong> Boil quinoa in water or broth, then mix with tomatoes, cucumber, red onion, parsley, mint, lemon juice, olive oil, salt, and pepper.</li>
+          <li><strong>Roast Vegetables:</strong> Toss vegetables with olive oil, salt, and pepper; roast until tender and slightly caramelized.</li>
+          <li><strong>Assemble:</strong> Serve the chicken over a bed of tabbouleh with roasted vegetables on the side. (Reserve extra for Tuesday’s lunch.)</li>
         </ol>
       </div>
-      
       <!-- Nutrition Box -->
       <div class="nutrition-box">
         <h3>Nutritional Information (Per Serving)</h3>
@@ -174,23 +182,31 @@
     </details>
   </div>
 
-  <!-- Meal 2 -->
-  <div class="container section">
-    <h2>Meal 2: Baked Salmon with Olive-Caper Salsa &amp; Roasted Mediterranean Vegetables</h2>
-    <!-- Collapsible Recipe -->
-    <details open>
-      <summary>Show/Hide Recipe Details</summary>
+  <!-- Tuesday -->
+  <div class="container">
+    <h2>Tuesday</h2>
+    <div class="section-text">
+      <strong>Breakfast:</strong> Mediterranean Veggie Omelette with spinach, diced tomatoes, crumbled feta, Kalamata olives, and fresh basil.
+    </div>
+    <div class="section-text">
+      <strong>Lunch:</strong> Leftover Monday Dinner.
+    </div>
+    <div class="section-text">
+      <strong>Snack:</strong> Apple slices with a handful of raw almonds.
+    </div>
+    <details>
+      <summary>Show/Hide Tuesday Dinner Recipe (Leftovers for Wednesday Lunch)</summary>
       <!-- Ingredients Box -->
       <div class="ingredients-box">
         <h3>Ingredients</h3>
-        <h4>For the Salmon</h4>
+        <h4>Baked Salmon</h4>
         <ul>
           <li>2 salmon fillets (≈6 oz each)</li>
           <li>1 tbsp extra-virgin olive oil</li>
           <li>Salt &amp; pepper, to taste</li>
           <li>2 lemon slices (plus extra juice if desired)</li>
         </ul>
-        <h4>For the Olive-Caper Salsa</h4>
+        <h4>Olive-Caper Salsa</h4>
         <ul>
           <li>¼ cup pitted Kalamata olives, chopped</li>
           <li>2 tbsp capers, drained and chopped</li>
@@ -199,30 +215,22 @@
           <li>Juice of ½ lemon</li>
           <li>1 tbsp extra-virgin olive oil</li>
         </ul>
-        <h4>For the Vegetables</h4>
+        <h4>Roasted Mediterranean Vegetables</h4>
         <ul>
-          <li>1 small eggplant, cubed</li>
-          <li>1 zucchini, cut into half-moons</li>
-          <li>1 red bell pepper, chopped</li>
-          <li>1 cup cherry tomatoes</li>
-          <li>1 small red onion, cut into wedges</li>
-          <li>2 garlic cloves, minced</li>
-          <li>2 tbsp extra-virgin olive oil</li>
-          <li>Salt, pepper &amp; dried oregano (or basil)</li>
+          <li>Eggplant, zucchini, red bell pepper, and cherry tomatoes</li>
+          <li>Olive oil, salt &amp; pepper</li>
         </ul>
       </div>
-
       <!-- Recipe Directions -->
       <div>
         <h3>Recipe Directions</h3>
         <ol>
-          <li><strong>Preheat &amp; Roast Vegetables:</strong> Preheat your oven to 425°F (220°C). Toss eggplant, zucchini, bell pepper, cherry tomatoes, red onion, and garlic with olive oil, salt, pepper, and oregano on a baking sheet. Roast for 25–30 minutes (stir halfway).</li>
-          <li><strong>Bake the Salmon:</strong> Place salmon in a greased dish, drizzle with olive oil, season, and top with a lemon slice. Bake for 12–15 minutes until salmon flakes easily.</li>
-          <li><strong>Make the Salsa:</strong> In a bowl, mix olives, capers, red onion, parsley, lemon juice, and olive oil. Adjust seasoning as needed.</li>
-          <li><strong>Assemble:</strong> Spoon the salsa over the salmon and serve with the roasted vegetables.</li>
+          <li><strong>Bake Salmon:</strong> Brush salmon with olive oil, season with salt and pepper, top with lemon slices, and bake until it flakes easily (12–15 minutes).</li>
+          <li><strong>Prepare Salsa:</strong> Mix olives, capers, red onion, parsley, lemon juice, and olive oil in a bowl.</li>
+          <li><strong>Roast Vegetables:</strong> Toss vegetables in olive oil, salt, and pepper; roast until tender.</li>
+          <li><strong>Assemble:</strong> Plate the salmon with a generous spoonful of salsa alongside roasted vegetables. (Make extra for Wednesday’s lunch.)</li>
         </ol>
       </div>
-      
       <!-- Nutrition Box -->
       <div class="nutrition-box">
         <h3>Nutritional Information (Per Serving)</h3>
@@ -237,27 +245,164 @@
     </details>
   </div>
 
-  <!-- Grocery List Section -->
-  <div class="container section">
-    <h2>Grocery List</h2>
-    <ul class="grocery-list">
-      <li><label><input type="checkbox"> 2 chicken breasts</label></li>
-      <li><label><input type="checkbox"> 2 salmon fillets</label></li>
-      <li><label><input type="checkbox"> 3 lemons</label></li>
-      <li><label><input type="checkbox"> 4 garlic cloves</label></li>
-      <li><label><input type="checkbox"> 1 small eggplant</label></li>
-      <li><label><input type="checkbox"> 1 zucchini</label></li>
-      <li><label><input type="checkbox"> 2 red bell peppers</label></li>
-      <li><label><input type="checkbox"> 1–2 red onions</label></li>
-      <li><label><input type="checkbox"> 2 cups cherry tomatoes</label></li>
-      <li><label><input type="checkbox"> 1 medium cucumber</label></li>
-      <li><label><input type="checkbox"> 1 cup fresh parsley</label></li>
-      <li><label><input type="checkbox"> ¼ cup fresh mint leaves</label></li>
-      <li><label><input type="checkbox"> 1 cup quinoa</label></li>
-      <li><label><input type="checkbox"> Extra-virgin olive oil, salt, pepper, dried oregano</label></li>
-      <li><label><input type="checkbox"> Capers &amp; ¼ cup pitted Kalamata olives</label></li>
-      <li><label><input type="checkbox"> (Optional: ½ cup crumbled feta cheese &amp; low-sodium broth)</label></li>
-    </ul>
+  <!-- Wednesday -->
+  <div class="container">
+    <h2>Wednesday</h2>
+    <div class="section-text">
+      <strong>Breakfast:</strong> Overnight Oats with rolled oats, milk (or almond milk), Greek yogurt, chopped fresh figs, honey, and a pinch of cinnamon.
+    </div>
+    <div class="section-text">
+      <strong>Lunch:</strong> Leftover Tuesday Dinner.
+    </div>
+    <div class="section-text">
+      <strong>Snack:</strong> Baba Ganoush with baked whole-grain pita chips.
+    </div>
+    <details>
+      <summary>Show/Hide Wednesday Dinner Recipe (Leftovers for Thursday Lunch)</summary>
+      <!-- Ingredients Box -->
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>Chicken Thighs</h4>
+        <ul>
+          <li>4 chicken thighs</li>
+          <li>Olive oil, garlic, lemon juice, mixed herbs, salt &amp; pepper</li>
+        </ul>
+        <h4>Chickpea Stew</h4>
+        <ul>
+          <li>1 can chickpeas (drained)</li>
+          <li>1 can diced tomatoes</li>
+          <li>Spinach, garlic, onion, smoked paprika</li>
+        </ul>
+        <h4>Couscous</h4>
+        <ul>
+          <li>1 cup whole-wheat couscous</li>
+          <li>Chopped parsley</li>
+        </ul>
+      </div>
+      <!-- Recipe Directions -->
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Roast Chicken Thighs:</strong> Marinate and roast until crispy and cooked through.</li>
+          <li><strong>Prepare Chickpea Stew:</strong> Sauté garlic and onion, add tomatoes, chickpeas, spinach, and smoked paprika; simmer until flavors meld.</li>
+          <li><strong>Steam Couscous:</strong> Prepare couscous according to package directions and stir in chopped parsley.</li>
+          <li><strong>Assemble:</strong> Serve the chicken thighs over a bed of chickpea stew with couscous on the side. (Reserve extra for Thursday’s lunch.)</li>
+        </ol>
+      </div>
+      <!-- Nutrition Box -->
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~600 kcal</li>
+          <li>Protein: ~45 g</li>
+          <li>Carbs: ~50 g</li>
+          <li>Fats: ~20 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+  </div>
+
+  <!-- Thursday -->
+  <div class="container">
+    <h2>Thursday</h2>
+    <div class="section-text">
+      <strong>Breakfast:</strong> Avocado toast on whole-grain bread topped with a poached egg, halved cherry tomatoes, and fresh basil.
+    </div>
+    <div class="section-text">
+      <strong>Lunch:</strong> Leftover Wednesday Dinner.
+    </div>
+    <div class="section-text">
+      <strong>Snack:</strong> Greek yogurt with chopped walnuts and a drizzle of honey.
+    </div>
+    <details>
+      <summary>Show/Hide Thursday Dinner Recipe (Leftovers for Friday Lunch)</summary>
+      <!-- Ingredients Box -->
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>Greek-Style Fish Stew</h4>
+        <ul>
+          <li>2 white fish fillets (cod or halibut)</li>
+          <li>1 potato (cubed) and 1 carrot (sliced)</li>
+          <li>1 can diced tomatoes</li>
+          <li>Garlic, onion, olives, capers</li>
+          <li>A splash of white wine</li>
+          <li>Fresh oregano and dill</li>
+          <li>Salt &amp; pepper</li>
+        </ul>
+      </div>
+      <!-- Recipe Directions -->
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Simmer Stew:</strong> In a large pot, sauté garlic and onion; add potatoes, carrots, and tomatoes with olives, capers, and a splash of white wine. Simmer until vegetables are tender.</li>
+          <li><strong>Add Fish:</strong> Gently place fish fillets in the stew, cook until the fish is just done and flavors meld.</li>
+          <li><strong>Finish:</strong> Stir in fresh oregano and dill, adjust seasoning, and serve. (Reserve extra for Friday’s lunch.)</li>
+        </ol>
+      </div>
+      <!-- Nutrition Box -->
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~500 kcal</li>
+          <li>Protein: ~35 g</li>
+          <li>Carbs: ~40 g</li>
+          <li>Fats: ~15 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+  </div>
+
+  <!-- Friday -->
+  <div class="container">
+    <h2>Friday</h2>
+    <div class="section-text">
+      <strong>Breakfast:</strong> Spinach &amp; feta scrambled eggs served with toasted whole-grain bread.
+    </div>
+    <div class="section-text">
+      <strong>Lunch:</strong> Leftover Thursday Dinner.
+    </div>
+    <div class="section-text">
+      <strong>Snack:</strong> A mix of fresh seasonal fruit (oranges/grapes) with a handful of pistachios.
+    </div>
+    <details>
+      <summary>Show/Hide Friday Dinner Recipe (Leftovers for Saturday Lunch)</summary>
+      <!-- Ingredients Box -->
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>Vegetable Moussaka</h4>
+        <ul>
+          <li>2 eggplants, sliced thinly</li>
+          <li>1 zucchini, sliced</li>
+          <li>1 can diced tomatoes</li>
+          <li>1 cup lentils (cooked)</li>
+          <li>Cinnamon, allspice</li>
+          <li>Béchamel sauce (light)</li>
+          <li>Olive oil, salt &amp; pepper</li>
+        </ul>
+      </div>
+      <!-- Recipe Directions -->
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Prepare Vegetables:</strong> Lightly salt eggplant and zucchini slices; roast or sauté until softened.</li>
+          <li><strong>Make Tomato-Lentil Sauce:</strong> Combine diced tomatoes, cooked lentils, cinnamon, allspice, salt, and pepper; simmer until thickened.</li>
+          <li><strong>Layer &amp; Bake:</strong> In a baking dish, layer the vegetables with the tomato-lentil sauce, top with a light béchamel sauce, and bake until golden and bubbling. (Reserve extra for Saturday’s lunch.)</li>
+        </ol>
+      </div>
+      <!-- Nutrition Box -->
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~550 kcal</li>
+          <li>Protein: ~25 g</li>
+          <li>Carbs: ~60 g</li>
+          <li>Fats: ~20 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
   </div>
 
   <footer>
