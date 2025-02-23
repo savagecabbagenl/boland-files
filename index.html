@@ -23,10 +23,8 @@
       max-width: 800px;
       margin: auto;
     }
-    h2 {
+    h2, h3 {
       color: #00796b;
-      border-bottom: 2px solid #00796b;
-      padding-bottom: 0.3rem;
     }
     .recipe {
       background: #fff;
@@ -59,8 +57,18 @@
       background: #fff3e0;
       border: 1px solid #ffcc80;
     }
-    .section {
-      margin-bottom: 2rem;
+    details {
+      margin-bottom: 1.5rem;
+      background: #fff;
+      padding: 0.5rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    summary {
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
     }
     .grocery-list {
       background: #fff;
@@ -74,6 +82,14 @@
     ul {
       margin: 0;
       padding-left: 1.2rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
     }
     @media (min-width: 600px) {
       .boxes {
@@ -92,479 +108,489 @@
   </header>
   <div class="container">
     <!-- Monday -->
-    <div class="section" id="monday">
-      <h2>Monday</h2>
-      <!-- Breakfast -->
-      <div class="recipe">
-        <div class="recipe-header">Breakfast: Greek Yogurt Parfait</div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 1):</strong>
-            <ul>
-              <li>1 cup plain Greek yogurt</li>
-              <li>1 tablespoon honey</li>
-              <li>1/4 cup walnuts, roughly chopped</li>
-              <li>1/2 cup mixed berries</li>
-            </ul>
+    <details>
+      <summary>Monday</summary>
+      <div class="section" id="monday">
+        <!-- Breakfast -->
+        <div class="recipe">
+          <div class="recipe-header">Breakfast: Greek Yogurt Parfait</div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 1):</strong>
+              <ul>
+                <li>1 cup plain Greek yogurt</li>
+                <li>1 tablespoon honey</li>
+                <li>1/4 cup walnuts, roughly chopped</li>
+                <li>1/2 cup mixed berries</li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Spoon Greek yogurt into a bowl or glass.</li>
+                <li>Drizzle honey over the yogurt.</li>
+                <li>Sprinkle walnuts on top.</li>
+                <li>Gently fold in or layer the mixed berries. Enjoy immediately.</li>
+              </ol>
+            </div>
           </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Spoon Greek yogurt into a bowl or glass.</li>
-              <li>Drizzle honey over the yogurt.</li>
-              <li>Sprinkle walnuts on top.</li>
-              <li>Gently fold in or layer the mixed berries. Enjoy immediately.</li>
-            </ol>
+        </div>
+        <!-- Dinner -->
+        <div class="recipe">
+          <div class="recipe-header">Dinner: Lemon Herb Chicken with Quinoa and Sautéed Veggies <em>(Yields leftovers for Tuesday’s lunch)</em></div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 2):</strong>
+              <ul>
+                <li>2 boneless, skinless chicken breasts (6 oz each)</li>
+                <li>1 lemon (zest and juice)</li>
+                <li>3 garlic cloves, minced</li>
+                <li>2 tbsp olive oil (divided)</li>
+                <li>1 tsp dried oregano</li>
+                <li>1/2 tsp salt</li>
+                <li>1/4 tsp black pepper</li>
+                <li>1 cup quinoa (rinsed)</li>
+                <li>2 cups water or low‐sodium chicken broth</li>
+                <li>1 small head broccoli, cut into florets</li>
+                <li>1 cup cherry tomatoes, halved</li>
+                <li>Optional: Fresh parsley (for garnish)</li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li><em>Marinate Chicken:</em> Combine 1 tbsp olive oil, lemon juice, lemon zest, garlic, oregano, salt, and pepper. Add chicken; marinate 20 minutes (up to 1 hour in fridge).</li>
+                <li><em>Prepare Quinoa:</em> In a saucepan, combine quinoa and water (or broth). Bring to a boil, reduce heat, cover, simmer for 15 minutes. Fluff with a fork.</li>
+                <li><em>Cook Chicken:</em> Preheat a grill pan or skillet over medium-high heat. Cook chicken for 5–6 minutes per side until internal temperature reaches 165°F.</li>
+                <li><em>Sauté Veggies:</em> In a skillet, heat 1 tbsp olive oil over medium heat. Add broccoli; sauté for 4–5 minutes. Add cherry tomatoes in the last 2 minutes. Season lightly with salt and pepper.</li>
+                <li><em>Plate & Serve:</em> Divide quinoa between plates, slice chicken, and top with veggies. Garnish with parsley. Cool leftovers for Tuesday’s lunch.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Dinner -->
-      <div class="recipe">
-        <div class="recipe-header">Dinner: Lemon Herb Chicken with Quinoa and Sautéed Veggies <em>(Yields leftovers for Tuesday’s lunch)</em></div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 2):</strong>
-            <ul>
-              <li>2 boneless, skinless chicken breasts (6 oz each)</li>
-              <li>1 lemon (zest and juice)</li>
-              <li>3 garlic cloves, minced</li>
-              <li>2 tbsp olive oil (divided)</li>
-              <li>1 tsp dried oregano</li>
-              <li>1/2 tsp salt</li>
-              <li>1/4 tsp black pepper</li>
-              <li>1 cup quinoa (rinsed)</li>
-              <li>2 cups water or low‐sodium chicken broth</li>
-              <li>1 small head broccoli, cut into florets</li>
-              <li>1 cup cherry tomatoes, halved</li>
-              <li>Optional: Fresh parsley (for garnish)</li>
-            </ul>
-          </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li><em>Marinate Chicken:</em> In a shallow dish, combine 1 tbsp olive oil, lemon juice, lemon zest, minced garlic, oregano, salt, and pepper. Add chicken breasts; marinate 20 minutes (up to 1 hour in fridge).</li>
-              <li><em>Prepare Quinoa:</em> In a saucepan, combine quinoa and water (or broth). Bring to a boil, then reduce heat, cover, and simmer for 15 minutes. Fluff with a fork.</li>
-              <li><em>Cook Chicken:</em> Preheat a grill pan or skillet over medium-high heat. Cook chicken for 5–6 minutes per side until internal temperature reaches 165°F.</li>
-              <li><em>Sauté Veggies:</em> In a large skillet, heat 1 tbsp olive oil over medium heat. Add broccoli and sauté for 4–5 minutes. Add cherry tomatoes in the last 2 minutes. Season lightly with salt and pepper.</li>
-              <li><em>Plate & Serve:</em> Divide quinoa between two plates, slice chicken, and top with sautéed veggies. Garnish with fresh parsley if desired. Cool leftovers for Tuesday’s lunch.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
+    </details>
 
     <!-- Tuesday -->
-    <div class="section" id="tuesday">
-      <h2>Tuesday</h2>
-      <!-- Breakfast -->
-      <div class="recipe">
-        <div class="recipe-header">Breakfast: Mediterranean Avocado Toast with Poached Egg</div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 1):</strong>
-            <ul>
-              <li>1 slice whole-grain bread</li>
-              <li>1/2 ripe avocado</li>
-              <li>Salt and pepper, to taste</li>
-              <li>A pinch of red pepper flakes (optional)</li>
-              <li>1 egg</li>
-              <li>1 tbsp crumbled feta cheese</li>
-              <li>2 cherry tomatoes, halved</li>
-            </ul>
+    <details>
+      <summary>Tuesday</summary>
+      <div class="section" id="tuesday">
+        <!-- Breakfast -->
+        <div class="recipe">
+          <div class="recipe-header">Breakfast: Mediterranean Avocado Toast with Poached Egg</div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 1):</strong>
+              <ul>
+                <li>1 slice whole-grain bread</li>
+                <li>1/2 ripe avocado</li>
+                <li>Salt and pepper, to taste</li>
+                <li>A pinch of red pepper flakes (optional)</li>
+                <li>1 egg</li>
+                <li>1 tbsp crumbled feta cheese</li>
+                <li>2 cherry tomatoes, halved</li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Toast the bread until lightly browned.</li>
+                <li>Bring a small pot of water to a simmer and poach the egg (3–4 minutes until white is set).</li>
+                <li>Mash the avocado; season with salt, pepper, and red pepper flakes if using.</li>
+                <li>Spread avocado on toast, top with egg, feta, and tomatoes. Serve immediately.</li>
+              </ol>
+            </div>
           </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Toast the bread until lightly browned.</li>
-              <li>Bring a small pot of water to a simmer and poach the egg (3–4 minutes until white is set).</li>
-              <li>Mash the avocado; season with salt, pepper, and red pepper flakes if using.</li>
-              <li>Spread avocado on toast, top with the poached egg, feta, and cherry tomatoes. Serve immediately.</li>
-            </ol>
+        </div>
+        <!-- Lunch -->
+        <div class="recipe">
+          <div class="recipe-header">Lunch: Monday Dinner Leftovers</div>
+          <div class="boxes">
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Reheat Monday’s leftover lemon herb chicken with quinoa and sautéed veggies (about 2 minutes) until warmed through.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- Dinner -->
+        <div class="recipe">
+          <div class="recipe-header">Dinner: Baked Cod with Tomato Olive Relish, Couscous & Sautéed Zucchini <em>(Yields leftovers for Wednesday’s lunch)</em></div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 2):</strong>
+              <ul>
+                <li><strong>For Cod & Relish:</strong>
+                  <ul>
+                    <li>2 cod fillets (6 oz each)</li>
+                    <li>Salt and pepper, to taste</li>
+                    <li>2 tbsp olive oil (divided)</li>
+                    <li>1 cup cherry tomatoes, halved</li>
+                    <li>1/2 cup Kalamata olives, chopped</li>
+                    <li>1 small red onion, finely chopped</li>
+                    <li>2 garlic cloves, minced</li>
+                    <li>1 tbsp capers (optional)</li>
+                    <li>1 tbsp chopped fresh basil (or parsley)</li>
+                  </ul>
+                </li>
+                <li><strong>For Couscous:</strong>
+                  <ul>
+                    <li>1 cup couscous</li>
+                    <li>1 cup water or broth</li>
+                  </ul>
+                </li>
+                <li><strong>For Zucchini:</strong>
+                  <ul>
+                    <li>2 medium zucchinis, sliced into rounds</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li><em>Preheat & Season:</em> Preheat oven to 400°F; season cod with salt and pepper.</li>
+                <li><em>Make Relish:</em> In a bowl, combine tomatoes, olives, onion, garlic, capers, and basil with 1 tbsp olive oil.</li>
+                <li><em>Bake Cod:</em> Place cod on a parchment-lined sheet, spoon relish over fillets, and bake 12–15 minutes until flaky.</li>
+                <li><em>Prepare Couscous:</em> In a saucepan, bring water to a boil, stir in couscous, cover for 5 minutes, then fluff.</li>
+                <li><em>Sauté Zucchini:</em> In a skillet, heat 1 tbsp olive oil, add zucchini, sauté for 3–4 minutes until tender, season lightly.</li>
+                <li><em>Plate & Serve:</em> Divide couscous between plates, add cod with relish and zucchini. Cool leftovers for Wednesday’s lunch.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Lunch -->
-      <div class="recipe">
-        <div class="recipe-header">Lunch: Monday Dinner Leftovers</div>
-        <div class="boxes">
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Reheat the leftover lemon herb chicken with quinoa and sautéed veggies (about 2 minutes in a microwave or on a skillet) until warmed through.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-      <!-- Dinner -->
-      <div class="recipe">
-        <div class="recipe-header">Dinner: Baked Cod with Tomato Olive Relish, Couscous & Sautéed Zucchini <em>(Yields leftovers for Wednesday’s lunch)</em></div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 2):</strong>
-            <ul>
-              <li><strong>For Cod & Relish:</strong>
-                <ul>
-                  <li>2 cod fillets (6 oz each)</li>
-                  <li>Salt and pepper, to taste</li>
-                  <li>2 tbsp olive oil (divided)</li>
-                  <li>1 cup cherry tomatoes, halved</li>
-                  <li>1/2 cup Kalamata olives, pitted and chopped</li>
-                  <li>1 small red onion, finely chopped</li>
-                  <li>2 garlic cloves, minced</li>
-                  <li>1 tbsp capers (optional)</li>
-                  <li>1 tbsp chopped fresh basil (or parsley)</li>
-                </ul>
-              </li>
-              <li><strong>For Couscous:</strong>
-                <ul>
-                  <li>1 cup couscous</li>
-                  <li>1 cup water or broth</li>
-                </ul>
-              </li>
-              <li><strong>For Zucchini:</strong>
-                <ul>
-                  <li>2 medium zucchinis, sliced into rounds</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li><em>Preheat & Season:</em> Preheat oven to 400°F; season cod with salt and pepper.</li>
-              <li><em>Tomato Olive Relish:</em> In a bowl, mix cherry tomatoes, olives, red onion, garlic, capers, and basil with 1 tbsp olive oil.</li>
-              <li><em>Bake Cod:</em> Place cod on a parchment-lined baking sheet, spoon relish on top, and bake for 12–15 minutes until flaky.</li>
-              <li><em>Prepare Couscous:</em> In a saucepan, bring water (or broth) to a boil, stir in couscous, cover for 5 minutes, then fluff.</li>
-              <li><em>Sauté Zucchini:</em> In a skillet, heat 1 tbsp olive oil over medium heat, add zucchini, sauté for 3–4 minutes, season lightly.</li>
-              <li><em>Plate & Serve:</em> Divide couscous between two plates, add cod with relish, and arrange zucchini on the side. Cool leftovers for Wednesday’s lunch.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
+    </details>
 
     <!-- Wednesday -->
-    <div class="section" id="wednesday">
-      <h2>Wednesday</h2>
-      <!-- Breakfast -->
-      <div class="recipe">
-        <div class="recipe-header">Breakfast: Overnight Oats with Almond Milk, Figs, Honey & Pistachios</div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 1):</strong>
-            <ul>
-              <li>1/2 cup rolled oats</li>
-              <li>1 cup almond milk</li>
-              <li>1–2 dried figs, chopped (or 1 small fresh fig, chopped)</li>
-              <li>1 tbsp honey</li>
-              <li>2 tbsp chopped pistachios</li>
-            </ul>
+    <details>
+      <summary>Wednesday</summary>
+      <div class="section" id="wednesday">
+        <!-- Breakfast -->
+        <div class="recipe">
+          <div class="recipe-header">Breakfast: Overnight Oats with Almond Milk, Figs, Honey & Pistachios</div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 1):</strong>
+              <ul>
+                <li>1/2 cup rolled oats</li>
+                <li>1 cup almond milk</li>
+                <li>1–2 dried figs, chopped (or 1 small fresh fig, chopped)</li>
+                <li>1 tbsp honey</li>
+                <li>2 tbsp chopped pistachios</li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Combine oats and almond milk in a jar or bowl.</li>
+                <li>Stir in figs and honey.</li>
+                <li>Cover and refrigerate overnight (or at least 6 hours).</li>
+                <li>In the morning, stir well and top with pistachios before serving.</li>
+              </ol>
+            </div>
           </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Combine oats and almond milk in a jar or bowl.</li>
-              <li>Stir in figs and honey.</li>
-              <li>Cover and refrigerate overnight (or at least 6 hours).</li>
-              <li>In the morning, stir well and top with pistachios before serving.</li>
-            </ol>
+        </div>
+        <!-- Lunch -->
+        <div class="recipe">
+          <div class="recipe-header">Lunch: Tuesday Dinner Leftovers</div>
+          <div class="boxes">
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Reheat Tuesday’s baked cod with relish, couscous, and sautéed zucchini until heated through.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- Dinner -->
+        <div class="recipe">
+          <div class="recipe-header">Dinner: Chickpea & Spinach Stew with Quinoa & Greek Salad <em>(Yields leftovers for Thursday’s lunch)</em></div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients for Stew (for 2):</strong>
+              <ul>
+                <li>1 can (15 oz) chickpeas, drained and rinsed</li>
+                <li>1 small onion, chopped</li>
+                <li>2 garlic cloves, minced</li>
+                <li>1 can (14.5 oz) diced tomatoes (or 2–3 fresh tomatoes, chopped)</li>
+                <li>3 cups fresh spinach (packed)</li>
+                <li>1 tsp ground cumin</li>
+                <li>1/2 tsp smoked paprika</li>
+                <li>Salt and pepper, to taste</li>
+                <li>2 tbsp olive oil</li>
+              </ul>
+              <strong>Ingredients for Quinoa:</strong>
+              <ul>
+                <li>1 cup quinoa (rinsed)</li>
+                <li>2 cups water or vegetable broth</li>
+              </ul>
+              <strong>Ingredients for Greek Salad (for 2):</strong>
+              <ul>
+                <li>1 cucumber, diced</li>
+                <li>2 tomatoes, chopped</li>
+                <li>1/2 small red onion, thinly sliced</li>
+                <li>1/4 cup Kalamata olives, pitted</li>
+                <li>2 oz feta cheese, crumbled</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tsp red wine vinegar</li>
+                <li>Salt and pepper, to taste</li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li><em>Prepare Quinoa:</em> In a saucepan, combine quinoa and 2 cups water (or broth). Bring to a boil, reduce heat, cover, simmer 15 minutes. Fluff with a fork.</li>
+                <li><em>Make the Stew:</em> In a large pan, heat 2 tbsp olive oil over medium heat. Sauté chopped onion for 3–4 minutes until softened. Add garlic (1 minute), then stir in tomatoes, chickpeas, cumin, smoked paprika, salt, and pepper; simmer 8–10 minutes. Stir in spinach; cook until just wilted (about 2 minutes).</li>
+                <li><em>Prepare Greek Salad:</em> In a bowl, combine cucumber, tomatoes, red onion, and Kalamata olives. Drizzle with olive oil and red wine vinegar; season with salt and pepper. Top with feta cheese.</li>
+                <li><em>Plate & Serve:</em> Divide quinoa between two plates, spoon the stew over quinoa, and serve with Greek salad. Cool leftovers for Thursday’s lunch.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Lunch -->
-      <div class="recipe">
-        <div class="recipe-header">Lunch: Tuesday Dinner Leftovers</div>
-        <div class="boxes">
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Reheat the baked cod with tomato olive relish, couscous, and sautéed zucchini until heated through.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-      <!-- Dinner -->
-      <div class="recipe">
-        <div class="recipe-header">Dinner: Chickpea & Spinach Stew with Quinoa & Greek Salad <em>(Yields leftovers for Thursday’s lunch)</em></div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients for Stew (for 2):</strong>
-            <ul>
-              <li>1 can (15 oz) chickpeas, drained and rinsed</li>
-              <li>1 small onion, chopped</li>
-              <li>2 garlic cloves, minced</li>
-              <li>1 can (14.5 oz) diced tomatoes (or 2–3 fresh tomatoes, chopped)</li>
-              <li>3 cups fresh spinach (packed)</li>
-              <li>1 tsp ground cumin</li>
-              <li>1/2 tsp smoked paprika</li>
-              <li>Salt and pepper, to taste</li>
-              <li>2 tbsp olive oil</li>
-            </ul>
-            <strong>Ingredients for Quinoa:</strong>
-            <ul>
-              <li>1 cup quinoa (rinsed)</li>
-              <li>2 cups water or vegetable broth</li>
-            </ul>
-            <strong>Ingredients for Greek Salad (for 2):</strong>
-            <ul>
-              <li>1 cucumber, diced</li>
-              <li>2 tomatoes, chopped</li>
-              <li>1/2 small red onion, thinly sliced</li>
-              <li>1/4 cup Kalamata olives, pitted</li>
-              <li>2 oz feta cheese, crumbled</li>
-              <li>1 tbsp olive oil</li>
-              <li>1 tsp red wine vinegar</li>
-              <li>Salt and pepper, to taste</li>
-            </ul>
-          </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li><em>Prepare Quinoa:</em> In a saucepan, combine quinoa and 2 cups water (or broth). Bring to a boil, reduce heat, cover, and simmer for 15 minutes. Fluff with a fork.</li>
-              <li><em>Make the Stew:</em> In a large pan, heat 2 tbsp olive oil over medium heat. Sauté chopped onion for 3–4 minutes until softened. Add garlic and cook for 1 minute. Stir in diced tomatoes, chickpeas, cumin, smoked paprika, salt, and pepper; simmer for 8–10 minutes. Stir in spinach and cook until just wilted (about 2 minutes).</li>
-              <li><em>Prepare Greek Salad:</em> In a bowl, combine diced cucumber, chopped tomatoes, red onion slices, and Kalamata olives. Drizzle with olive oil and red wine vinegar; season with salt and pepper. Top with crumbled feta cheese.</li>
-              <li><em>Plate & Serve:</em> Divide quinoa between two plates, spoon the chickpea-spinach stew over the quinoa, and serve with Greek salad. Cool leftovers for Thursday’s lunch.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
+    </details>
 
     <!-- Thursday -->
-    <div class="section" id="thursday">
-      <h2>Thursday</h2>
-      <!-- Breakfast -->
-      <div class="recipe">
-        <div class="recipe-header">Breakfast: Mediterranean Omelette with Spinach, Tomatoes, Olives & Feta</div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 1):</strong>
-            <ul>
-              <li>2 eggs</li>
-              <li>A small handful of fresh spinach, roughly chopped</li>
-              <li>1 small tomato, diced</li>
-              <li>1/4 cup sliced olives (Kalamata or your choice)</li>
-              <li>2 tbsp crumbled feta cheese</li>
-              <li>Salt and pepper, to taste</li>
-              <li>1 tsp olive oil</li>
-            </ul>
+    <details>
+      <summary>Thursday</summary>
+      <div class="section" id="thursday">
+        <!-- Breakfast -->
+        <div class="recipe">
+          <div class="recipe-header">Breakfast: Mediterranean Omelette with Spinach, Tomatoes, Olives & Feta</div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 1):</strong>
+              <ul>
+                <li>2 eggs</li>
+                <li>Small handful fresh spinach, roughly chopped</li>
+                <li>1 small tomato, diced</li>
+                <li>1/4 cup sliced olives (Kalamata or choice)</li>
+                <li>2 tbsp crumbled feta cheese</li>
+                <li>Salt and pepper, to taste</li>
+                <li>1 tsp olive oil</li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Whisk eggs with salt and pepper.</li>
+                <li>Heat olive oil in a nonstick skillet over medium heat; add spinach and tomato, sauté 2 minutes.</li>
+                <li>Pour in eggs, let set slightly while stirring gently.</li>
+                <li>Add olives and feta; continue cooking until eggs are set. Fold and serve immediately.</li>
+              </ol>
+            </div>
           </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Whisk eggs with salt and pepper.</li>
-              <li>Heat olive oil in a nonstick skillet over medium heat; add spinach and tomato, sauté for 2 minutes.</li>
-              <li>Pour in eggs and allow to set slightly, stirring gently.</li>
-              <li>Add sliced olives and feta; continue cooking until eggs are set. Fold the omelette and serve immediately.</li>
-            </ol>
+        </div>
+        <!-- Lunch -->
+        <div class="recipe">
+          <div class="recipe-header">Lunch: Wednesday Dinner Leftovers</div>
+          <div class="boxes">
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Reheat the chickpea & spinach stew with quinoa and Greek salad until warmed through.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- Dinner -->
+        <div class="recipe">
+          <div class="recipe-header">Dinner: Grilled Salmon with Roasted Vegetables & Bulgur Wheat <em>(Yields leftovers for Friday’s lunch)</em></div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 2):</strong>
+              <ul>
+                <li><strong>For Salmon:</strong>
+                  <ul>
+                    <li>2 salmon fillets (6 oz each)</li>
+                    <li>Salt and pepper, to taste</li>
+                    <li>Lemon slices (from 1 lemon)</li>
+                  </ul>
+                </li>
+                <li><strong>For Roasted Vegetables:</strong>
+                  <ul>
+                    <li>1 small eggplant, cubed</li>
+                    <li>1 red bell pepper, sliced</li>
+                    <li>1 zucchini, sliced</li>
+                    <li>2 tbsp olive oil</li>
+                    <li>1 tsp dried thyme (or oregano)</li>
+                    <li>Salt and pepper, to taste</li>
+                  </ul>
+                </li>
+                <li><strong>For Bulgur Wheat:</strong>
+                  <ul>
+                    <li>1 cup bulgur wheat</li>
+                    <li>1 1/2 cups water or vegetable broth</li>
+                    <li>A pinch of salt</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li><em>Preheat Oven:</em> Preheat oven to 425°F.</li>
+                <li><em>Roast Veggies:</em> On a baking sheet, toss eggplant, bell pepper, and zucchini with olive oil, thyme, salt, and pepper. Roast for 20–25 minutes (stir halfway) until tender and lightly browned.</li>
+                <li><em>Prepare Bulgur:</em> In a saucepan, bring water (or broth) with a pinch of salt to a boil, stir in bulgur, cover, and let sit for 12–15 minutes. Fluff with a fork.</li>
+                <li><em>Grill Salmon:</em> Season salmon with salt and pepper, then grill in a pan over medium-high heat for 4–5 minutes per side. Top with a lemon slice in the final minute.</li>
+                <li><em>Plate & Serve:</em> Divide bulgur and roasted veggies between plates, top with grilled salmon, and reserve leftovers for Friday’s lunch.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Lunch -->
-      <div class="recipe">
-        <div class="recipe-header">Lunch: Wednesday Dinner Leftovers</div>
-        <div class="boxes">
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Reheat the chickpea & spinach stew with quinoa and Greek salad until warmed through.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-      <!-- Dinner -->
-      <div class="recipe">
-        <div class="recipe-header">Dinner: Grilled Salmon with Roasted Vegetables & Bulgur Wheat <em>(Yields leftovers for Friday’s lunch)</em></div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 2):</strong>
-            <ul>
-              <li><strong>For Salmon:</strong>
-                <ul>
-                  <li>2 salmon fillets (6 oz each)</li>
-                  <li>Salt and pepper, to taste</li>
-                  <li>Lemon slices (from 1 lemon)</li>
-                </ul>
-              </li>
-              <li><strong>For Roasted Vegetables:</strong>
-                <ul>
-                  <li>1 small eggplant, cubed</li>
-                  <li>1 red bell pepper, sliced</li>
-                  <li>1 zucchini, sliced</li>
-                  <li>2 tbsp olive oil</li>
-                  <li>1 tsp dried thyme (or oregano)</li>
-                  <li>Salt and pepper, to taste</li>
-                </ul>
-              </li>
-              <li><strong>For Bulgur Wheat:</strong>
-                <ul>
-                  <li>1 cup bulgur wheat</li>
-                  <li>1 1/2 cups water or vegetable broth</li>
-                  <li>A pinch of salt</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li><em>Preheat Oven:</em> Preheat oven to 425°F.</li>
-              <li><em>Roast Vegetables:</em> On a baking sheet, toss eggplant, red bell pepper, and zucchini with olive oil, thyme, salt, and pepper. Roast for 20–25 minutes (stir halfway) until tender and lightly browned.</li>
-              <li><em>Prepare Bulgur Wheat:</em> In a saucepan, bring water (or broth) with a pinch of salt to a boil. Stir in bulgur wheat, cover, and let sit for 12–15 minutes. Fluff with a fork.</li>
-              <li><em>Grill Salmon:</em> Season salmon with salt and pepper. Heat a grill pan or skillet over medium-high heat; cook salmon for 4–5 minutes per side. In the final minute, top with a lemon slice.</li>
-              <li><em>Plate & Serve:</em> Divide bulgur wheat and roasted vegetables between two plates. Top with a grilled salmon fillet. Reserve leftovers for Friday’s lunch.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
+    </details>
 
     <!-- Friday -->
-    <div class="section" id="friday">
-      <h2>Friday</h2>
-      <!-- Breakfast -->
-      <div class="recipe">
-        <div class="recipe-header">Breakfast: Fresh Fruit Salad with Greek Yogurt, Honey & Chia Seeds</div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 1):</strong>
-            <ul>
-              <li>1/2 cup plain Greek yogurt</li>
-              <li>1 cup mixed fresh fruit (leftover berries, orange segments, apple chunks, etc.)</li>
-              <li>1 tsp honey</li>
-              <li>1 tsp chia seeds</li>
-            </ul>
+    <details>
+      <summary>Friday</summary>
+      <div class="section" id="friday">
+        <!-- Breakfast -->
+        <div class="recipe">
+          <div class="recipe-header">Breakfast: Fresh Fruit Salad with Greek Yogurt, Honey & Chia Seeds</div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 1):</strong>
+              <ul>
+                <li>1/2 cup plain Greek yogurt</li>
+                <li>1 cup mixed fresh fruit (leftover berries, orange segments, apple chunks, etc.)</li>
+                <li>1 tsp honey</li>
+                <li>1 tsp chia seeds</li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Combine the mixed fruit in a bowl.</li>
+                <li>Stir in Greek yogurt until well mixed.</li>
+                <li>Drizzle with honey and sprinkle chia seeds on top. Serve immediately.</li>
+              </ol>
+            </div>
           </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Combine the mixed fresh fruit in a bowl.</li>
-              <li>Stir in the Greek yogurt until evenly mixed.</li>
-              <li>Drizzle honey and sprinkle chia seeds on top. Serve immediately.</li>
-            </ol>
+        </div>
+        <!-- Lunch -->
+        <div class="recipe">
+          <div class="recipe-header">Lunch: Thursday Dinner Leftovers</div>
+          <div class="boxes">
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li>Reheat the grilled salmon with roasted veggies and bulgur wheat until warmed through.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- Dinner -->
+        <div class="recipe">
+          <div class="recipe-header">Dinner: Mediterranean Tuna Pasta with Capers, Olives, Cherry Tomatoes & Spinach; Served with Garlic Bread</div>
+          <div class="boxes">
+            <div class="box ingredients">
+              <strong>Ingredients (for 2):</strong>
+              <ul>
+                <li><strong>For Pasta:</strong>
+                  <ul>
+                    <li>8 oz whole-grain pasta</li>
+                    <li>2 cans tuna in olive oil (5 oz each), drained (reserve some olive oil)</li>
+                    <li>1 cup cherry tomatoes, halved</li>
+                    <li>1/2 cup Kalamata olives, sliced</li>
+                    <li>2 garlic cloves, minced (plus extra for garlic bread)</li>
+                    <li>2 cups fresh spinach</li>
+                    <li>1 tbsp capers, rinsed</li>
+                    <li>2 tbsp olive oil (plus any reserved)</li>
+                    <li>Salt, pepper, and red pepper flakes (optional)</li>
+                  </ul>
+                </li>
+                <li><strong>For Garlic Bread:</strong>
+                  <ul>
+                    <li>1 small baguette or slice whole-grain bread</li>
+                    <li>1 garlic clove, minced</li>
+                    <li>1–2 tsp butter or olive oil</li>
+                    <li>A few chopped fresh parsley leaves</li>
+                    <li>Optional: light sprinkle of salt</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="box instructions">
+              <strong>Instructions:</strong>
+              <ol>
+                <li><em>Cook Pasta:</em> Bring a large pot of salted water to a boil, cook pasta until al dente (reserve 1/4 cup water), then drain.</li>
+                <li><em>Prepare Sauce:</em> In a skillet, heat 2 tbsp olive oil and sauté minced garlic for 1 minute. Add tomatoes, olives, and capers; sauté 2–3 minutes until tomatoes soften. Stir in tuna and spinach; if needed, add reserved pasta water. Season with salt, pepper, and red pepper flakes.</li>
+                <li><em>Combine:</em> Toss pasta in the skillet until well coated with the sauce.</li>
+                <li><em>Garlic Bread:</em> Preheat the broiler. Slice the baguette lengthwise, then mix garlic with butter (or olive oil) and parsley. Spread evenly on the bread and broil for 2–3 minutes until lightly toasted.</li>
+                <li><em>Plate:</em> Divide the pasta between plates and serve with garlic bread.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Lunch -->
-      <div class="recipe">
-        <div class="recipe-header">Lunch: Thursday Dinner Leftovers</div>
-        <div class="boxes">
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li>Reheat the grilled salmon with roasted vegetables and bulgur wheat until warmed through.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-      <!-- Dinner -->
-      <div class="recipe">
-        <div class="recipe-header">Dinner: Mediterranean Tuna Pasta with Capers, Olives, Cherry Tomatoes & Spinach; Served with Garlic Bread</div>
-        <div class="boxes">
-          <div class="box ingredients">
-            <strong>Ingredients (for 2):</strong>
-            <ul>
-              <li><strong>For Pasta:</strong>
-                <ul>
-                  <li>8 oz whole-grain pasta</li>
-                  <li>2 cans tuna in olive oil (5 oz each), drained (reserve a little olive oil)</li>
-                  <li>1 cup cherry tomatoes, halved</li>
-                  <li>1/2 cup Kalamata olives, sliced</li>
-                  <li>2 garlic cloves, minced (plus extra for garlic bread)</li>
-                  <li>2 cups fresh spinach</li>
-                  <li>1 tbsp capers, rinsed</li>
-                  <li>2 tbsp olive oil (plus any reserved)</li>
-                  <li>Salt, pepper, and red pepper flakes (optional)</li>
-                </ul>
-              </li>
-              <li><strong>For Garlic Bread:</strong>
-                <ul>
-                  <li>1 small baguette or slice of whole-grain bread</li>
-                  <li>1 garlic clove, minced</li>
-                  <li>1–2 tsp butter or olive oil</li>
-                  <li>A few chopped fresh parsley leaves</li>
-                  <li>Optional: a light sprinkle of salt</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="box instructions">
-            <strong>Instructions:</strong>
-            <ol>
-              <li><em>Cook Pasta:</em> Bring a large pot of salted water to a boil, cook pasta until al dente (reserve 1/4 cup pasta water), then drain.</li>
-              <li><em>Prepare Sauce:</em> In a skillet over medium heat, warm 2 tbsp olive oil and sauté minced garlic for 1 minute. Add cherry tomatoes, olives, and capers; sauté 2–3 minutes until tomatoes soften. Stir in tuna and fresh spinach; if needed add reserved pasta water to loosen. Season with salt, pepper, and red pepper flakes.</li>
-              <li><em>Combine Pasta & Sauce:</em> Toss pasta into the skillet until well coated.</li>
-              <li><em>Prepare Garlic Bread:</em> Preheat broiler. Slice baguette in half lengthwise; mix minced garlic with butter (or olive oil) and parsley. Spread on bread halves and broil 2–3 minutes until lightly toasted.</li>
-              <li><em>Plate & Serve:</em> Divide tuna pasta between two plates and serve with garlic bread.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
+    </details>
 
     <!-- Grocery List -->
-    <div class="section" id="grocery-list">
-      <h2>Grocery List</h2>
+    <details>
+      <summary>Grocery List</summary>
       <div class="grocery-list">
         <div class="grocery-group">
-          <strong>Produce:</strong>
+          <h3>Produce</h3>
           <ul>
-            <li><em>Citrus & Fresh Herbs:</em> 2–3 lemons, fresh parsley, fresh basil</li>
-            <li><em>Vegetables:</em> 1 small head broccoli, 1 small eggplant, 2–3 zucchinis, 1 red bell pepper, 2 small red onions, 1 cucumber, 1 small tomato (for omelette), 2–3 additional tomatoes, 1–2 cups cherry tomatoes</li>
-            <li><em>Leafy Greens & Fruits:</em> 1 large bag fresh spinach, 1 small container mixed berries, fresh fruit for salad (about 1 cup chopped), 1–2 dried figs (or 1 small fresh fig), 1 avocado</li>
+            <li><label><input type="checkbox"> Citrus & Fresh Herbs: 2–3 lemons, fresh parsley, fresh basil</label></li>
+            <li><label><input type="checkbox"> Vegetables: 1 small head broccoli, 1 small eggplant, 2–3 zucchinis, 1 red bell pepper, 2 small red onions, 1 cucumber, 1 small tomato (for omelette), 2–3 additional tomatoes, 1–2 cups cherry tomatoes</label></li>
+            <li><label><input type="checkbox"> Leafy Greens & Fruits: 1 large bag fresh spinach, 1 small container mixed berries, fresh fruit for salad (about 1 cup chopped), 1–2 dried figs (or 1 small fresh fig), 1 avocado</label></li>
           </ul>
         </div>
         <div class="grocery-group">
-          <strong>Dairy & Eggs:</strong>
+          <h3>Dairy & Eggs</h3>
           <ul>
-            <li>1 container plain Greek yogurt (2–3 cups)</li>
-            <li>1 small block feta cheese (6–8 oz)</li>
-            <li>1 dozen eggs</li>
+            <li><label><input type="checkbox"> 1 container plain Greek yogurt (2–3 cups)</label></li>
+            <li><label><input type="checkbox"> 1 small block feta cheese (6–8 oz)</label></li>
+            <li><label><input type="checkbox"> 1 dozen eggs</label></li>
           </ul>
         </div>
         <div class="grocery-group">
-          <strong>Meat & Seafood:</strong>
+          <h3>Meat & Seafood</h3>
           <ul>
-            <li>2 chicken breasts (6 oz each)</li>
-            <li>2 cod fillets (6 oz each)</li>
-            <li>2 salmon fillets (6 oz each)</li>
-            <li>2 cans tuna in olive oil (5 oz each)</li>
+            <li><label><input type="checkbox"> 2 chicken breasts (6 oz each)</label></li>
+            <li><label><input type="checkbox"> 2 cod fillets (6 oz each)</label></li>
+            <li><label><input type="checkbox"> 2 salmon fillets (6 oz each)</label></li>
+            <li><label><input type="checkbox"> 2 cans tuna in olive oil (5 oz each)</label></li>
           </ul>
         </div>
         <div class="grocery-group">
-          <strong>Pantry & Dry Goods:</strong>
+          <h3>Pantry & Dry Goods</h3>
           <ul>
-            <li>Rolled oats</li>
-            <li>Almond milk (at least 1 cup)</li>
-            <li>Walnuts (approx. 1/4 cup)</li>
-            <li>Pistachios (about 2 tbsp, chopped)</li>
-            <li>Chia seeds</li>
-            <li>Whole-grain bread; a small baguette or extra whole-grain bread</li>
-            <li>Quinoa (2 cups total)</li>
-            <li>Couscous (1 cup)</li>
-            <li>Bulgur wheat (1 cup)</li>
-            <li>Whole-grain pasta (8 oz)</li>
-            <li>1 can (15 oz) chickpeas</li>
-            <li>1 can (14.5 oz) diced tomatoes (if not using fresh)</li>
-            <li>Capers (small jar)</li>
-            <li>Kalamata olives (approx. 1–1.5 cups)</li>
+            <li><label><input type="checkbox"> Rolled oats</label></li>
+            <li><label><input type="checkbox"> Almond milk (at least 1 cup)</label></li>
+            <li><label><input type="checkbox"> Walnuts (approx. 1/4 cup)</label></li>
+            <li><label><input type="checkbox"> Pistachios (about 2 tbsp, chopped)</label></li>
+            <li><label><input type="checkbox"> Chia seeds</label></li>
+            <li><label><input type="checkbox"> Whole-grain bread; a small baguette or extra whole-grain bread</label></li>
+            <li><label><input type="checkbox"> Quinoa (2 cups total)</label></li>
+            <li><label><input type="checkbox"> Couscous (1 cup)</label></li>
+            <li><label><input type="checkbox"> Bulgur wheat (1 cup)</label></li>
+            <li><label><input type="checkbox"> Whole-grain pasta (8 oz)</label></li>
+            <li><label><input type="checkbox"> 1 can (15 oz) chickpeas</label></li>
+            <li><label><input type="checkbox"> 1 can (14.5 oz) diced tomatoes (if not using fresh)</label></li>
+            <li><label><input type="checkbox"> Capers (small jar)</label></li>
+            <li><label><input type="checkbox"> Kalamata olives (approx. 1–1.5 cups)</label></li>
           </ul>
         </div>
         <div class="grocery-group">
-          <strong>Oils, Vinegars & Spices:</strong>
+          <h3>Oils, Vinegars & Spices</h3>
           <ul>
-            <li>Olive oil (at least 1/2 cup available)</li>
-            <li>Honey</li>
-            <li>Red wine vinegar</li>
-            <li>Dried oregano</li>
-            <li>Dried thyme (or oregano)</li>
-            <li>Ground cumin</li>
-            <li>Smoked paprika</li>
-            <li>Salt, black pepper, red pepper flakes</li>
+            <li><label><input type="checkbox"> Olive oil (at least 1/2 cup available)</label></li>
+            <li><label><input type="checkbox"> Honey</label></li>
+            <li><label><input type="checkbox"> Red wine vinegar</label></li>
+            <li><label><input type="checkbox"> Dried oregano</label></li>
+            <li><label><input type="checkbox"> Dried thyme (or oregano)</label></li>
+            <li><label><input type="checkbox"> Ground cumin</label></li>
+            <li><label><input type="checkbox"> Smoked paprika</label></li>
+            <li><label><input type="checkbox"> Salt, black pepper, red pepper flakes</label></li>
           </ul>
         </div>
       </div>
-    </div>
+    </details>
   </div>
 </body>
 </html>
