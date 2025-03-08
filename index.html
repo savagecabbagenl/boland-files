@@ -1,102 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mediterranean Meal Plan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mediterranean Meal Plan: Monday to Thursday</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: #f4f4f4;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background: #00796b;
-      color: #fff;
-      padding: 1rem;
+      background: #4A90E2;
+      padding: 60px 20px;
       text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
     }
     .container {
-      padding: 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2, h3 {
-      color: #00796b;
-    }
-    .recipe {
+      max-width: 900px;
+      margin: 30px auto;
       background: #fff;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-bottom: 40px;
     }
-    .recipe-header {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+    h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #2c3e50;
+    }
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 10px;
+    }
+    .meal-header {
+      margin: 10px 0;
       font-weight: bold;
-      color: #004d40;
-    }
-    .boxes {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-    .box {
-      padding: 0.8rem;
-      border-radius: 5px;
-    }
-    .ingredients {
-      background: #e0f2f1;
-      border: 1px solid #80cbc4;
-    }
-    .instructions {
-      background: #fff3e0;
-      border: 1px solid #ffcc80;
     }
     details {
-      margin-bottom: 1.5rem;
-      background: #fff;
-      padding: 0.5rem;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
     summary {
-      font-size: 1.2rem;
       font-weight: bold;
       cursor: pointer;
-      outline: none;
-    }
-    .grocery-list {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 5px;
+      padding: 10px;
+      background: #f0f0f0;
       border: 1px solid #ddd;
+      border-radius: 4px;
     }
-    .grocery-group {
-      margin-bottom: 1rem;
+    .ingredients-box, .nutrition-box {
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 15px;
     }
-    ul {
-      margin: 0;
-      padding-left: 1.2rem;
+    .ingredients-box {
+      background: #dff0d8;
+      border-color: #c1e2b3;
+      width: 45%;
+      float: right;
+      margin-left: 15px;
     }
-    label {
-      display: block;
-      margin-bottom: 0.3rem;
-      cursor: pointer;
+    .nutrition-box {
+      background: #fcf8e3;
+      border-color: #faf2cc;
+      clear: both;
     }
-    input[type="checkbox"] {
-      margin-right: 0.5rem;
+    ol, ul {
+      padding-left: 20px;
     }
-    @media (min-width: 600px) {
-      .boxes {
-        flex-direction: row;
-      }
-      .box {
-        flex: 1;
+    .section-text {
+      margin-bottom: 15px;
+    }
+    .grocery-list input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .grocery-list li {
+      margin-bottom: 5px;
+      list-style: none;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      padding: 20px;
+    }
+    @media (max-width: 600px) {
+      .ingredients-box {
+        width: 90%;
+        float: none;
+        margin: 15px auto;
       }
     }
   </style>
@@ -104,493 +114,612 @@
 <body>
   <header>
     <h1>Mediterranean Meal Plan</h1>
-    <p>Monday to Friday</p>
+    <p>Monday – Thursday: Detailed Recipes for Breakfast, Dinner (with Leftovers for Lunch), Snacks &amp; Grocery List</p>
   </header>
+
+  <!-- Monday -->
   <div class="container">
-    <!-- Monday -->
+    <h2>Monday</h2>
+    <!-- Breakfast -->
+    <div class="meal-header">Breakfast: Fig &amp; Honey Greek Yogurt Bowl</div>
     <details>
-      <summary>Monday</summary>
-      <div class="section" id="monday">
-        <!-- Breakfast -->
-        <div class="recipe">
-          <div class="recipe-header">Breakfast: Greek Yogurt Parfait</div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 1):</strong>
-              <ul>
-                <li>1 cup plain Greek yogurt</li>
-                <li>1 tablespoon honey</li>
-                <li>1/4 cup walnuts, roughly chopped</li>
-                <li>1/2 cup mixed berries</li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Spoon Greek yogurt into a bowl or glass.</li>
-                <li>Drizzle honey over the yogurt.</li>
-                <li>Sprinkle walnuts on top.</li>
-                <li>Gently fold in or layer the mixed berries. Enjoy immediately.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Dinner -->
-        <div class="recipe">
-          <div class="recipe-header">Dinner: Lemon Herb Chicken with Quinoa and Sautéed Veggies <em>(Yields leftovers for Tuesday’s lunch)</em></div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 2):</strong>
-              <ul>
-                <li>2 boneless, skinless chicken breasts (6 oz each)</li>
-                <li>1 lemon (zest and juice)</li>
-                <li>3 garlic cloves, minced</li>
-                <li>2 tbsp olive oil (divided)</li>
-                <li>1 tsp dried oregano</li>
-                <li>1/2 tsp salt</li>
-                <li>1/4 tsp black pepper</li>
-                <li>1 cup quinoa (rinsed)</li>
-                <li>2 cups water or low‐sodium chicken broth</li>
-                <li>1 small head broccoli, cut into florets</li>
-                <li>1 cup cherry tomatoes, halved</li>
-                <li>Optional: Fresh parsley (for garnish)</li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li><em>Marinate Chicken:</em> Combine 1 tbsp olive oil, lemon juice, lemon zest, garlic, oregano, salt, and pepper. Add chicken; marinate 20 minutes (up to 1 hour in fridge).</li>
-                <li><em>Prepare Quinoa:</em> In a saucepan, combine quinoa and water (or broth). Bring to a boil, reduce heat, cover, simmer for 15 minutes. Fluff with a fork.</li>
-                <li><em>Cook Chicken:</em> Preheat a grill pan or skillet over medium-high heat. Cook chicken for 5–6 minutes per side until internal temperature reaches 165°F.</li>
-                <li><em>Sauté Veggies:</em> In a skillet, heat 1 tbsp olive oil over medium heat. Add broccoli; sauté for 4–5 minutes. Add cherry tomatoes in the last 2 minutes. Season lightly with salt and pepper.</li>
-                <li><em>Plate & Serve:</em> Divide quinoa between plates, slice chicken, and top with veggies. Garnish with parsley. Cool leftovers for Tuesday’s lunch.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+      <summary>Show/Hide Breakfast Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>2 cups full-fat Greek yogurt</li>
+          <li>2 fresh figs, quartered</li>
+          <li>2 tbsp honey</li>
+          <li>½ cup granola</li>
+          <li>¼ cup walnuts, chopped</li>
+        </ul>
       </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li>Spoon Greek yogurt into two bowls.</li>
+          <li>Top with quartered figs, drizzle honey, sprinkle granola and walnuts.</li>
+          <li>Serve immediately.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~320 kcal</li>
+          <li>Protein: ~21 g</li>
+          <li>Carbs: ~40 g</li>
+          <li>Fats: ~11 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
     </details>
 
-    <!-- Tuesday -->
+    <!-- Dinner -->
+    <div class="meal-header">Dinner: Herb-Roasted Chicken with Farro Salad &amp; Roasted Mediterranean Veggies<br>(Leftovers for Tuesday Lunch)</div>
     <details>
-      <summary>Tuesday</summary>
-      <div class="section" id="tuesday">
-        <!-- Breakfast -->
-        <div class="recipe">
-          <div class="recipe-header">Breakfast: Mediterranean Avocado Toast with Poached Egg</div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 1):</strong>
-              <ul>
-                <li>1 slice whole-grain bread</li>
-                <li>1/2 ripe avocado</li>
-                <li>Salt and pepper, to taste</li>
-                <li>A pinch of red pepper flakes (optional)</li>
-                <li>1 egg</li>
-                <li>1 tbsp crumbled feta cheese</li>
-                <li>2 cherry tomatoes, halved</li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Toast the bread until lightly browned.</li>
-                <li>Bring a small pot of water to a simmer and poach the egg (3–4 minutes until white is set).</li>
-                <li>Mash the avocado; season with salt, pepper, and red pepper flakes if using.</li>
-                <li>Spread avocado on toast, top with egg, feta, and tomatoes. Serve immediately.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Lunch -->
-        <div class="recipe">
-          <div class="recipe-header">Lunch: Monday Dinner Leftovers</div>
-          <div class="boxes">
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Reheat Monday’s leftover lemon herb chicken with quinoa and sautéed veggies (about 2 minutes) until warmed through.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Dinner -->
-        <div class="recipe">
-          <div class="recipe-header">Dinner: Baked Cod with Tomato Olive Relish, Couscous & Sautéed Zucchini <em>(Yields leftovers for Wednesday’s lunch)</em></div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 2):</strong>
-              <ul>
-                <li><strong>For Cod & Relish:</strong>
-                  <ul>
-                    <li>2 cod fillets (6 oz each)</li>
-                    <li>Salt and pepper, to taste</li>
-                    <li>2 tbsp olive oil (divided)</li>
-                    <li>1 cup cherry tomatoes, halved</li>
-                    <li>1/2 cup Kalamata olives, chopped</li>
-                    <li>1 small red onion, finely chopped</li>
-                    <li>2 garlic cloves, minced</li>
-                    <li>1 tbsp capers (optional)</li>
-                    <li>1 tbsp chopped fresh basil (or parsley)</li>
-                  </ul>
-                </li>
-                <li><strong>For Couscous:</strong>
-                  <ul>
-                    <li>1 cup couscous</li>
-                    <li>1 cup water or broth</li>
-                  </ul>
-                </li>
-                <li><strong>For Zucchini:</strong>
-                  <ul>
-                    <li>2 medium zucchinis, sliced into rounds</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li><em>Preheat & Season:</em> Preheat oven to 400°F; season cod with salt and pepper.</li>
-                <li><em>Make Relish:</em> In a bowl, combine tomatoes, olives, onion, garlic, capers, and basil with 1 tbsp olive oil.</li>
-                <li><em>Bake Cod:</em> Place cod on a parchment-lined sheet, spoon relish over fillets, and bake 12–15 minutes until flaky.</li>
-                <li><em>Prepare Couscous:</em> In a saucepan, bring water to a boil, stir in couscous, cover for 5 minutes, then fluff.</li>
-                <li><em>Sauté Zucchini:</em> In a skillet, heat 1 tbsp olive oil, add zucchini, sauté for 3–4 minutes until tender, season lightly.</li>
-                <li><em>Plate & Serve:</em> Divide couscous between plates, add cod with relish and zucchini. Cool leftovers for Wednesday’s lunch.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+      <summary>Show/Hide Dinner Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>Herb-Roasted Chicken</h4>
+        <ul>
+          <li>2 boneless, skinless chicken breasts (7 oz each)</li>
+          <li>2 tbsp extra-virgin olive oil</li>
+          <li>Juice of 1 lemon</li>
+          <li>2 garlic cloves, minced</li>
+          <li>1 tsp dried thyme</li>
+          <li>Salt &amp; pepper, to taste</li>
+        </ul>
+        <h4>Farro Salad</h4>
+        <ul>
+          <li>1 cup farro, rinsed</li>
+          <li>2 cups water or low-sodium broth</li>
+          <li>1 cup cherry tomatoes, halved</li>
+          <li>1 small cucumber, diced</li>
+          <li>½ red onion, finely chopped</li>
+          <li>1 cup fresh parsley, chopped</li>
+          <li>Juice of ½ lemon</li>
+          <li>1 tbsp olive oil</li>
+          <li>Salt &amp; pepper, to taste</li>
+        </ul>
+        <h4>Roasted Vegetables</h4>
+        <ul>
+          <li>1 medium zucchini, cubed</li>
+          <li>1 red bell pepper, seeded &amp; cubed</li>
+          <li>1 small eggplant, cubed</li>
+          <li>1 tbsp olive oil, salt &amp; pepper</li>
+        </ul>
       </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Marinate Chicken:</strong> Toss chicken with olive oil, lemon juice, garlic, thyme, salt, and pepper. Let sit for 30 minutes.</li>
+          <li><strong>Roast Chicken:</strong> Bake or grill at 425°F (220°C) until internal temperature reaches 165°F (74°C), then slice.</li>
+          <li><strong>Cook Farro:</strong> Simmer farro in water or broth for about 25 minutes until tender; drain.</li>
+          <li><strong>Prepare Salad:</strong> Toss farro with cherry tomatoes, cucumber, red onion, parsley, lemon juice, olive oil, salt, and pepper.</li>
+          <li><strong>Roast Veggies:</strong> Toss zucchini, bell pepper, and eggplant in olive oil, salt, and pepper; roast in a 425°F (220°C) oven for 25–30 minutes.</li>
+          <li><strong>Assemble:</strong> Plate sliced chicken over farro salad with roasted vegetables on the side. Reserve extra for Tuesday’s lunch.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~520 kcal</li>
+          <li>Protein: ~42 g</li>
+          <li>Carbs: ~45 g</li>
+          <li>Fats: ~18 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
     </details>
 
-    <!-- Wednesday -->
+    <!-- Snack -->
+    <div class="meal-header">Snack: Cucumber Hummus Bites</div>
     <details>
-      <summary>Wednesday</summary>
-      <div class="section" id="wednesday">
-        <!-- Breakfast -->
-        <div class="recipe">
-          <div class="recipe-header">Breakfast: Overnight Oats with Almond Milk, Figs, Honey & Pistachios</div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 1):</strong>
-              <ul>
-                <li>1/2 cup rolled oats</li>
-                <li>1 cup almond milk</li>
-                <li>1–2 dried figs, chopped (or 1 small fresh fig, chopped)</li>
-                <li>1 tbsp honey</li>
-                <li>2 tbsp chopped pistachios</li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Combine oats and almond milk in a jar or bowl.</li>
-                <li>Stir in figs and honey.</li>
-                <li>Cover and refrigerate overnight (or at least 6 hours).</li>
-                <li>In the morning, stir well and top with pistachios before serving.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Lunch -->
-        <div class="recipe">
-          <div class="recipe-header">Lunch: Tuesday Dinner Leftovers</div>
-          <div class="boxes">
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Reheat Tuesday’s baked cod with relish, couscous, and sautéed zucchini until heated through.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Dinner -->
-        <div class="recipe">
-          <div class="recipe-header">Dinner: Chickpea & Spinach Stew with Quinoa & Greek Salad <em>(Yields leftovers for Thursday’s lunch)</em></div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients for Stew (for 2):</strong>
-              <ul>
-                <li>1 can (15 oz) chickpeas, drained and rinsed</li>
-                <li>1 small onion, chopped</li>
-                <li>2 garlic cloves, minced</li>
-                <li>1 can (14.5 oz) diced tomatoes (or 2–3 fresh tomatoes, chopped)</li>
-                <li>3 cups fresh spinach (packed)</li>
-                <li>1 tsp ground cumin</li>
-                <li>1/2 tsp smoked paprika</li>
-                <li>Salt and pepper, to taste</li>
-                <li>2 tbsp olive oil</li>
-              </ul>
-              <strong>Ingredients for Quinoa:</strong>
-              <ul>
-                <li>1 cup quinoa (rinsed)</li>
-                <li>2 cups water or vegetable broth</li>
-              </ul>
-              <strong>Ingredients for Greek Salad (for 2):</strong>
-              <ul>
-                <li>1 cucumber, diced</li>
-                <li>2 tomatoes, chopped</li>
-                <li>1/2 small red onion, thinly sliced</li>
-                <li>1/4 cup Kalamata olives, pitted</li>
-                <li>2 oz feta cheese, crumbled</li>
-                <li>1 tbsp olive oil</li>
-                <li>1 tsp red wine vinegar</li>
-                <li>Salt and pepper, to taste</li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li><em>Prepare Quinoa:</em> In a saucepan, combine quinoa and 2 cups water (or broth). Bring to a boil, reduce heat, cover, simmer 15 minutes. Fluff with a fork.</li>
-                <li><em>Make the Stew:</em> In a large pan, heat 2 tbsp olive oil over medium heat. Sauté chopped onion for 3–4 minutes until softened. Add garlic (1 minute), then stir in tomatoes, chickpeas, cumin, smoked paprika, salt, and pepper; simmer 8–10 minutes. Stir in spinach; cook until just wilted (about 2 minutes).</li>
-                <li><em>Prepare Greek Salad:</em> In a bowl, combine cucumber, tomatoes, red onion, and Kalamata olives. Drizzle with olive oil and red wine vinegar; season with salt and pepper. Top with feta cheese.</li>
-                <li><em>Plate & Serve:</em> Divide quinoa between two plates, spoon the stew over quinoa, and serve with Greek salad. Cool leftovers for Thursday’s lunch.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+      <summary>Show/Hide Snack Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 large cucumber, sliced into rounds</li>
+          <li>1 cup hummus</li>
+        </ul>
       </div>
-    </details>
-
-    <!-- Thursday -->
-    <details>
-      <summary>Thursday</summary>
-      <div class="section" id="thursday">
-        <!-- Breakfast -->
-        <div class="recipe">
-          <div class="recipe-header">Breakfast: Mediterranean Omelette with Spinach, Tomatoes, Olives & Feta</div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 1):</strong>
-              <ul>
-                <li>2 eggs</li>
-                <li>Small handful fresh spinach, roughly chopped</li>
-                <li>1 small tomato, diced</li>
-                <li>1/4 cup sliced olives (Kalamata or choice)</li>
-                <li>2 tbsp crumbled feta cheese</li>
-                <li>Salt and pepper, to taste</li>
-                <li>1 tsp olive oil</li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Whisk eggs with salt and pepper.</li>
-                <li>Heat olive oil in a nonstick skillet over medium heat; add spinach and tomato, sauté 2 minutes.</li>
-                <li>Pour in eggs, let set slightly while stirring gently.</li>
-                <li>Add olives and feta; continue cooking until eggs are set. Fold and serve immediately.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Lunch -->
-        <div class="recipe">
-          <div class="recipe-header">Lunch: Wednesday Dinner Leftovers</div>
-          <div class="boxes">
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Reheat the chickpea & spinach stew with quinoa and Greek salad until warmed through.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Dinner -->
-        <div class="recipe">
-          <div class="recipe-header">Dinner: Grilled Salmon with Roasted Vegetables & Bulgur Wheat <em>(Yields leftovers for Friday’s lunch)</em></div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 2):</strong>
-              <ul>
-                <li><strong>For Salmon:</strong>
-                  <ul>
-                    <li>2 salmon fillets (6 oz each)</li>
-                    <li>Salt and pepper, to taste</li>
-                    <li>Lemon slices (from 1 lemon)</li>
-                  </ul>
-                </li>
-                <li><strong>For Roasted Vegetables:</strong>
-                  <ul>
-                    <li>1 small eggplant, cubed</li>
-                    <li>1 red bell pepper, sliced</li>
-                    <li>1 zucchini, sliced</li>
-                    <li>2 tbsp olive oil</li>
-                    <li>1 tsp dried thyme (or oregano)</li>
-                    <li>Salt and pepper, to taste</li>
-                  </ul>
-                </li>
-                <li><strong>For Bulgur Wheat:</strong>
-                  <ul>
-                    <li>1 cup bulgur wheat</li>
-                    <li>1 1/2 cups water or vegetable broth</li>
-                    <li>A pinch of salt</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li><em>Preheat Oven:</em> Preheat oven to 425°F.</li>
-                <li><em>Roast Veggies:</em> On a baking sheet, toss eggplant, bell pepper, and zucchini with olive oil, thyme, salt, and pepper. Roast for 20–25 minutes (stir halfway) until tender and lightly browned.</li>
-                <li><em>Prepare Bulgur:</em> In a saucepan, bring water (or broth) with a pinch of salt to a boil, stir in bulgur, cover, and let sit for 12–15 minutes. Fluff with a fork.</li>
-                <li><em>Grill Salmon:</em> Season salmon with salt and pepper, then grill in a pan over medium-high heat for 4–5 minutes per side. Top with a lemon slice in the final minute.</li>
-                <li><em>Plate & Serve:</em> Divide bulgur and roasted veggies between plates, top with grilled salmon, and reserve leftovers for Friday’s lunch.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li>Slice cucumber into 1/4‑inch rounds.</li>
+          <li>Top each slice with about 1 tsp of hummus.</li>
+          <li>Serve chilled.</li>
+        </ol>
       </div>
-    </details>
-
-    <!-- Friday -->
-    <details>
-      <summary>Friday</summary>
-      <div class="section" id="friday">
-        <!-- Breakfast -->
-        <div class="recipe">
-          <div class="recipe-header">Breakfast: Fresh Fruit Salad with Greek Yogurt, Honey & Chia Seeds</div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 1):</strong>
-              <ul>
-                <li>1/2 cup plain Greek yogurt</li>
-                <li>1 cup mixed fresh fruit (leftover berries, orange segments, apple chunks, etc.)</li>
-                <li>1 tsp honey</li>
-                <li>1 tsp chia seeds</li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Combine the mixed fruit in a bowl.</li>
-                <li>Stir in Greek yogurt until well mixed.</li>
-                <li>Drizzle with honey and sprinkle chia seeds on top. Serve immediately.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Lunch -->
-        <div class="recipe">
-          <div class="recipe-header">Lunch: Thursday Dinner Leftovers</div>
-          <div class="boxes">
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li>Reheat the grilled salmon with roasted veggies and bulgur wheat until warmed through.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- Dinner -->
-        <div class="recipe">
-          <div class="recipe-header">Dinner: Mediterranean Tuna Pasta with Capers, Olives, Cherry Tomatoes & Spinach; Served with Garlic Bread</div>
-          <div class="boxes">
-            <div class="box ingredients">
-              <strong>Ingredients (for 2):</strong>
-              <ul>
-                <li><strong>For Pasta:</strong>
-                  <ul>
-                    <li>8 oz whole-grain pasta</li>
-                    <li>2 cans tuna in olive oil (5 oz each), drained (reserve some olive oil)</li>
-                    <li>1 cup cherry tomatoes, halved</li>
-                    <li>1/2 cup Kalamata olives, sliced</li>
-                    <li>2 garlic cloves, minced (plus extra for garlic bread)</li>
-                    <li>2 cups fresh spinach</li>
-                    <li>1 tbsp capers, rinsed</li>
-                    <li>2 tbsp olive oil (plus any reserved)</li>
-                    <li>Salt, pepper, and red pepper flakes (optional)</li>
-                  </ul>
-                </li>
-                <li><strong>For Garlic Bread:</strong>
-                  <ul>
-                    <li>1 small baguette or slice whole-grain bread</li>
-                    <li>1 garlic clove, minced</li>
-                    <li>1–2 tsp butter or olive oil</li>
-                    <li>A few chopped fresh parsley leaves</li>
-                    <li>Optional: light sprinkle of salt</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="box instructions">
-              <strong>Instructions:</strong>
-              <ol>
-                <li><em>Cook Pasta:</em> Bring a large pot of salted water to a boil, cook pasta until al dente (reserve 1/4 cup water), then drain.</li>
-                <li><em>Prepare Sauce:</em> In a skillet, heat 2 tbsp olive oil and sauté minced garlic for 1 minute. Add tomatoes, olives, and capers; sauté 2–3 minutes until tomatoes soften. Stir in tuna and spinach; if needed, add reserved pasta water. Season with salt, pepper, and red pepper flakes.</li>
-                <li><em>Combine:</em> Toss pasta in the skillet until well coated with the sauce.</li>
-                <li><em>Garlic Bread:</em> Preheat the broiler. Slice the baguette lengthwise, then mix garlic with butter (or olive oil) and parsley. Spread evenly on the bread and broil for 2–3 minutes until lightly toasted.</li>
-                <li><em>Plate:</em> Divide the pasta between plates and serve with garlic bread.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~120 kcal</li>
+          <li>Protein: ~4 g</li>
+          <li>Carbs: ~15 g</li>
+          <li>Fats: ~6 g</li>
+        </ul>
       </div>
-    </details>
-
-    <!-- Grocery List -->
-    <details>
-      <summary>Grocery List</summary>
-      <div class="grocery-list">
-        <div class="grocery-group">
-          <h3>Produce</h3>
-          <ul>
-            <li><label><input type="checkbox"> Citrus & Fresh Herbs: 2–3 lemons, fresh parsley, fresh basil</label></li>
-            <li><label><input type="checkbox"> Vegetables: 1 small head broccoli, 1 small eggplant, 2–3 zucchinis, 1 red bell pepper, 2 small red onions, 1 cucumber, 1 small tomato (for omelette), 2–3 additional tomatoes, 1–2 cups cherry tomatoes</label></li>
-            <li><label><input type="checkbox"> Leafy Greens & Fruits: 1 large bag fresh spinach, 1 small container mixed berries, fresh fruit for salad (about 1 cup chopped), 1–2 dried figs (or 1 small fresh fig), 1 avocado</label></li>
-          </ul>
-        </div>
-        <div class="grocery-group">
-          <h3>Dairy & Eggs</h3>
-          <ul>
-            <li><label><input type="checkbox"> 1 container plain Greek yogurt (2–3 cups)</label></li>
-            <li><label><input type="checkbox"> 1 small block feta cheese (6–8 oz)</label></li>
-            <li><label><input type="checkbox"> 1 dozen eggs</label></li>
-          </ul>
-        </div>
-        <div class="grocery-group">
-          <h3>Meat & Seafood</h3>
-          <ul>
-            <li><label><input type="checkbox"> 2 chicken breasts (6 oz each)</label></li>
-            <li><label><input type="checkbox"> 2 cod fillets (6 oz each)</label></li>
-            <li><label><input type="checkbox"> 2 salmon fillets (6 oz each)</label></li>
-            <li><label><input type="checkbox"> 2 cans tuna in olive oil (5 oz each)</label></li>
-          </ul>
-        </div>
-        <div class="grocery-group">
-          <h3>Pantry & Dry Goods</h3>
-          <ul>
-            <li><label><input type="checkbox"> Rolled oats</label></li>
-            <li><label><input type="checkbox"> Almond milk (at least 1 cup)</label></li>
-            <li><label><input type="checkbox"> Walnuts (approx. 1/4 cup)</label></li>
-            <li><label><input type="checkbox"> Pistachios (about 2 tbsp, chopped)</label></li>
-            <li><label><input type="checkbox"> Chia seeds</label></li>
-            <li><label><input type="checkbox"> Whole-grain bread; a small baguette or extra whole-grain bread</label></li>
-            <li><label><input type="checkbox"> Quinoa (2 cups total)</label></li>
-            <li><label><input type="checkbox"> Couscous (1 cup)</label></li>
-            <li><label><input type="checkbox"> Bulgur wheat (1 cup)</label></li>
-            <li><label><input type="checkbox"> Whole-grain pasta (8 oz)</label></li>
-            <li><label><input type="checkbox"> 1 can (15 oz) chickpeas</label></li>
-            <li><label><input type="checkbox"> 1 can (14.5 oz) diced tomatoes (if not using fresh)</label></li>
-            <li><label><input type="checkbox"> Capers (small jar)</label></li>
-            <li><label><input type="checkbox"> Kalamata olives (approx. 1–1.5 cups)</label></li>
-          </ul>
-        </div>
-        <div class="grocery-group">
-          <h3>Oils, Vinegars & Spices</h3>
-          <ul>
-            <li><label><input type="checkbox"> Olive oil (at least 1/2 cup available)</label></li>
-            <li><label><input type="checkbox"> Honey</label></li>
-            <li><label><input type="checkbox"> Red wine vinegar</label></li>
-            <li><label><input type="checkbox"> Dried oregano</label></li>
-            <li><label><input type="checkbox"> Dried thyme (or oregano)</label></li>
-            <li><label><input type="checkbox"> Ground cumin</label></li>
-            <li><label><input type="checkbox"> Smoked paprika</label></li>
-            <li><label><input type="checkbox"> Salt, black pepper, red pepper flakes</label></li>
-          </ul>
-        </div>
-      </div>
+      <div style="clear: both;"></div>
     </details>
   </div>
+
+  <!-- Tuesday -->
+  <div class="container">
+    <h2>Tuesday</h2>
+    <!-- Breakfast -->
+    <div class="meal-header">Breakfast: Spinach &amp; Tomato Frittata</div>
+    <details>
+      <summary>Show/Hide Breakfast Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>4 large eggs</li>
+          <li>1 cup fresh spinach, chopped</li>
+          <li>½ cup diced tomatoes</li>
+          <li>¼ cup crumbled feta</li>
+          <li>1 tbsp olive oil</li>
+          <li>Salt &amp; pepper, to taste</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li>Preheat oven to 375°F (190°C).</li>
+          <li>Beat eggs with salt and pepper; stir in spinach, tomatoes, and feta.</li>
+          <li>Heat olive oil in an ovenproof skillet and pour in the egg mixture.</li>
+          <li>Bake for 12–15 minutes until set.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~310 kcal</li>
+          <li>Protein: ~23 g</li>
+          <li>Carbs: ~8 g</li>
+          <li>Fats: ~20 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+
+    <!-- Lunch -->
+    <div class="section-text"><strong>Lunch:</strong> Leftover Monday Dinner</div>
+
+    <!-- Dinner -->
+    <div class="meal-header">Dinner: Baked Cod with Lemon-Caper Sauce &amp; Mediterranean Veggie Medley<br>(Leftovers for Wednesday Lunch)</div>
+    <details>
+      <summary>Show/Hide Dinner Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>Baked Cod</h4>
+        <ul>
+          <li>2 cod fillets (≈6 oz each)</li>
+          <li>1 tbsp extra-virgin olive oil</li>
+          <li>Salt &amp; pepper, to taste</li>
+          <li>2 lemon slices (plus extra juice if desired)</li>
+        </ul>
+        <h4>Lemon-Caper Sauce</h4>
+        <ul>
+          <li>¼ cup Kalamata olives, chopped</li>
+          <li>1 tbsp capers</li>
+          <li>¼ small red onion, finely diced</li>
+          <li>Juice of ½ lemon</li>
+          <li>1 tbsp extra-virgin olive oil</li>
+        </ul>
+        <h4>Mediterranean Veggie Medley</h4>
+        <ul>
+          <li>1 small eggplant, cubed</li>
+          <li>1 small zucchini, cubed</li>
+          <li>1 red bell pepper, cubed</li>
+          <li>1 cup cherry tomatoes, halved</li>
+          <li>Olive oil, salt &amp; pepper</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Bake the Cod:</strong> Brush fillets with olive oil, season with salt and pepper, top with lemon slices, and bake at 425°F (220°C) for 12–15 minutes until flaky.</li>
+          <li><strong>Prepare Sauce:</strong> Combine olives, capers, red onion, lemon juice, and olive oil in a bowl.</li>
+          <li><strong>Roast Veggies:</strong> Toss eggplant, zucchini, bell pepper, and cherry tomatoes with olive oil, salt, and pepper; roast in a 425°F (220°C) oven for 20–25 minutes.</li>
+          <li><strong>Assemble:</strong> Serve the baked cod drizzled with the lemon-caper sauce alongside the roasted vegetable medley. Reserve extra for Wednesday’s lunch.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~480 kcal</li>
+          <li>Protein: ~36 g</li>
+          <li>Carbs: ~32 g</li>
+          <li>Fats: ~22 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+
+    <!-- Snack -->
+    <div class="meal-header">Snack: Olive &amp; Feta Stuffed Mini Peppers</div>
+    <details>
+      <summary>Show/Hide Snack Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>8 mini bell peppers, halved and seeded</li>
+          <li>½ cup crumbled feta</li>
+          <li>6 Kalamata olives, chopped</li>
+          <li>1 tsp olive oil</li>
+          <li>Pinch of oregano</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li>Mix feta with chopped olives, olive oil, and oregano.</li>
+          <li>Spoon the mixture into each pepper half.</li>
+          <li>Serve chilled.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~140 kcal</li>
+          <li>Protein: ~6 g</li>
+          <li>Carbs: ~8 g</li>
+          <li>Fats: ~9 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+  </div>
+
+  <!-- Wednesday -->
+  <div class="container">
+    <h2>Wednesday</h2>
+    <!-- Breakfast -->
+    <div class="meal-header">Breakfast: Avocado &amp; Tomato Toast with Poached Egg</div>
+    <details>
+      <summary>Show/Hide Breakfast Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>2 slices whole-grain bread</li>
+          <li>1 ripe avocado</li>
+          <li>1 medium tomato, sliced</li>
+          <li>2 eggs</li>
+          <li>Salt &amp; pepper, to taste</li>
+          <li>Fresh basil leaves, a few</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li>Toast the bread and spread mashed avocado seasoned with salt and pepper.</li>
+          <li>Top with tomato slices.</li>
+          <li>Poach the eggs until whites are set and place on toast.</li>
+          <li>Garnish with fresh basil.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~360 kcal</li>
+          <li>Protein: ~18 g</li>
+          <li>Carbs: ~30 g</li>
+          <li>Fats: ~18 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+
+    <!-- Lunch -->
+    <div class="section-text"><strong>Lunch:</strong> Leftover Tuesday Dinner</div>
+
+    <!-- Dinner -->
+    <div class="meal-header">Dinner: Lemon Garlic Shrimp with Bulgur Pilaf &amp; Steamed Green Beans<br>(Leftovers for Thursday Lunch)</div>
+    <details>
+      <summary>Show/Hide Dinner Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>Lemon Garlic Shrimp</h4>
+        <ul>
+          <li>12 large shrimp, peeled and deveined</li>
+          <li>1 tbsp olive oil</li>
+          <li>2 garlic cloves, minced</li>
+          <li>Juice of 1 lemon</li>
+          <li>Salt &amp; pepper, to taste</li>
+          <li>1 tsp chopped fresh parsley</li>
+        </ul>
+        <h4>Bulgur Pilaf</h4>
+        <ul>
+          <li>1 cup bulgur wheat</li>
+          <li>2 cups water or broth</li>
+          <li>1 small onion, finely chopped</li>
+          <li>2 tbsp chopped fresh parsley</li>
+          <li>1 tbsp olive oil</li>
+          <li>Salt, to taste</li>
+        </ul>
+        <h4>Steamed Green Beans</h4>
+        <ul>
+          <li>8 oz green beans, trimmed</li>
+          <li>A pinch of salt</li>
+          <li>1 tsp olive oil (optional)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Sauté Shrimp:</strong> In a skillet, heat olive oil and sauté garlic for 1 minute. Add shrimp, lemon juice, salt, and pepper; cook until shrimp turn pink (about 3–4 minutes). Stir in parsley.</li>
+          <li><strong>Prepare Bulgur:</strong> In a saucepan, sauté chopped onion in olive oil until soft. Add bulgur and water or broth, bring to a boil, then simmer for 15 minutes until tender. Stir in parsley and season with salt.</li>
+          <li><strong>Steam Green Beans:</strong> Steam green beans until crisp-tender (about 5 minutes), then toss with a pinch of salt and olive oil if desired.</li>
+          <li><strong>Assemble:</strong> Plate the shrimp over a bed of bulgur pilaf with a side of green beans. Reserve extra for Thursday’s lunch.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~480 kcal</li>
+          <li>Protein: ~38 g</li>
+          <li>Carbs: ~40 g</li>
+          <li>Fats: ~16 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+
+    <!-- Snack -->
+    <div class="meal-header">Snack: Roasted Chickpeas with Paprika</div>
+    <details>
+      <summary>Show/Hide Snack Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 can chickpeas, rinsed and drained</li>
+          <li>1 tsp olive oil</li>
+          <li>½ tsp smoked paprika</li>
+          <li>Salt, to taste</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li>Preheat oven to 400°F (200°C).</li>
+          <li>Toss chickpeas with olive oil, smoked paprika, and salt.</li>
+          <li>Spread on a baking sheet and roast for 20–25 minutes until crisp.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~150 kcal</li>
+          <li>Protein: ~6 g</li>
+          <li>Carbs: ~22 g</li>
+          <li>Fats: ~4 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+  </div>
+
+  <!-- Thursday -->
+  <div class="container">
+    <h2>Thursday</h2>
+    <!-- Breakfast -->
+    <div class="meal-header">Breakfast: Mediterranean Omelette with Spinach &amp; Feta</div>
+    <details>
+      <summary>Show/Hide Breakfast Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>4 large eggs</li>
+          <li>1 cup fresh spinach, chopped</li>
+          <li>¼ cup crumbled feta</li>
+          <li>½ cup diced tomatoes</li>
+          <li>1 tsp olive oil</li>
+          <li>Salt &amp; pepper, to taste</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li>Beat eggs with salt and pepper in a bowl.</li>
+          <li>Heat olive oil in a nonstick skillet and sauté spinach and tomatoes until just wilted.</li>
+          <li>Pour in the eggs and cook until softly scrambled; stir in feta before serving.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~360 kcal</li>
+          <li>Protein: ~22 g</li>
+          <li>Carbs: ~14 g</li>
+          <li>Fats: ~22 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+
+    <!-- Lunch -->
+    <div class="section-text"><strong>Lunch:</strong> Leftover Wednesday Dinner</div>
+
+    <!-- Dinner -->
+    <div class="meal-header">Dinner: Vegetable &amp; Chickpea Tagine with Couscous<br>(Leftovers for Friday Lunch)</div>
+    <details>
+      <summary>Show/Hide Dinner Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <h4>Vegetable &amp; Chickpea Tagine</h4>
+        <ul>
+          <li>1 small onion, thinly sliced</li>
+          <li>2 garlic cloves, minced</li>
+          <li>1 medium carrot, sliced</li>
+          <li>1 red bell pepper, sliced</li>
+          <li>1 small zucchini, sliced</li>
+          <li>1 can diced tomatoes (14.5 oz)</li>
+          <li>1 can chickpeas, drained</li>
+          <li>1 tsp ground cumin</li>
+          <li>½ tsp ground cinnamon</li>
+          <li>¼ tsp turmeric</li>
+          <li>Salt &amp; pepper, to taste</li>
+          <li>2 tbsp olive oil</li>
+          <li>Fresh cilantro, chopped (for garnish)</li>
+        </ul>
+        <h4>Couscous</h4>
+        <ul>
+          <li>1 cup whole-grain couscous</li>
+          <li>1 cup boiling water</li>
+          <li>2 tbsp chopped fresh parsley</li>
+          <li>Salt &amp; a drizzle of olive oil</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li><strong>Sauté Base:</strong> In a large pot, heat olive oil and sauté onion and garlic until soft. Add carrot, bell pepper, and zucchini; cook for 5 minutes.</li>
+          <li><strong>Add Main Ingredients:</strong> Stir in diced tomatoes, chickpeas, cumin, cinnamon, turmeric, salt, and pepper. Simmer for 15–20 minutes until flavors meld.</li>
+          <li><strong>Prepare Couscous:</strong> Place couscous in a bowl, pour boiling water over it, cover for 5 minutes, then fluff and stir in parsley and a drizzle of olive oil.</li>
+          <li><strong>Assemble:</strong> Spoon the tagine over couscous and garnish with chopped cilantro. Reserve extra tagine for Friday’s lunch.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~510 kcal</li>
+          <li>Protein: ~18 g</li>
+          <li>Carbs: ~65 g</li>
+          <li>Fats: ~16 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+
+    <!-- Snack -->
+    <div class="meal-header">Snack: Fresh Fruit Salad with Nuts</div>
+    <details>
+      <summary>Show/Hide Snack Recipe</summary>
+      <div class="ingredients-box">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 cup mixed seasonal fruit (such as oranges, grapes, and kiwi)</li>
+          <li>½ cup mixed nuts (such as pistachios, almonds, walnuts)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recipe Directions</h3>
+        <ol>
+          <li>Dice or slice the fruit and combine in a bowl.</li>
+          <li>Toss with mixed nuts and serve.</li>
+        </ol>
+      </div>
+      <div class="nutrition-box">
+        <h3>Nutritional Information (Per Serving)</h3>
+        <ul>
+          <li>Calories: ~230 kcal</li>
+          <li>Protein: ~6 g</li>
+          <li>Carbs: ~32 g</li>
+          <li>Fats: ~11 g</li>
+        </ul>
+      </div>
+      <div style="clear: both;"></div>
+    </details>
+  </div>
+
+  <!-- Grocery List -->
+  <div class="container">
+    <h2>Itemized Grocery List</h2>
+
+    <h3>Produce</h3>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> Fresh figs – 2</label></li>
+      <li><label><input type="checkbox"> Mixed fresh berries – 1 cup</label></li>
+      <li><label><input type="checkbox"> Apples – 2 medium</label></li>
+      <li><label><input type="checkbox"> Carrots – 2 large (plus 1 extra for fish stew if needed)</label></li>
+      <li><label><input type="checkbox"> Celery stalks – 2</label></li>
+      <li><label><input type="checkbox"> Medium cucumber – 1</label></li>
+      <li><label><input type="checkbox"> Cherry tomatoes – 3 cups total</label></li>
+      <li><label><input type="checkbox"> Red bell peppers – 3 (1 for cod dish, 1 for tagine, 1 mini for snack)</label></li>
+      <li><label><input type="checkbox"> Eggplant – 1 small (for cod medley)</label></li>
+      <li><label><input type="checkbox"> Zucchini – 2 (1 for cod medley, 1 for tagine)</label></li>
+      <li><label><input type="checkbox"> Small onion – 2 (for tagine and cod medley)</label></li>
+      <li><label><input type="checkbox"> Red onion – 1 (for quinoa tabbouleh)</label></li>
+      <li><label><input type="checkbox"> Fresh spinach – 2 cups total</label></li>
+      <li><label><input type="checkbox"> Fresh parsley – 1 bunch</label></li>
+      <li><label><input type="checkbox"> Fresh mint – 1 small bunch</label></li>
+      <li><label><input type="checkbox"> Fresh basil – 1 small bunch</label></li>
+      <li><label><input type="checkbox"> Fresh thyme – 1 small bunch</label></li>
+      <li><label><input type="checkbox"> Fresh oregano – 1 small bunch</label></li>
+      <li><label><input type="checkbox"> Fresh cilantro – 1 small bunch</label></li>
+      <li><label><input type="checkbox"> Fresh dill – 1 small bunch</label></li>
+      <li><label><input type="checkbox"> Avocado – 1</label></li>
+      <li><label><input type="checkbox"> Medium tomato – 2 (for frittata and toast)</label></li>
+      <li><label><input type="checkbox"> Orange, grapes or kiwi – 1 cup mixed fruit</label></li>
+    </ul>
+
+    <h3>Dairy &amp; Eggs</h3>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> Full-fat Greek yogurt – 2 cups</label></li>
+      <li><label><input type="checkbox"> Greek yogurt (for snack) – 1 cup</label></li>
+      <li><label><input type="checkbox"> Large eggs – 10</label></li>
+      <li><label><input type="checkbox"> Crumbled feta – 1 cup total</label></li>
+      <li><label><input type="checkbox"> Milk or almond milk – 1 cup</label></li>
+      <li><label><input type="checkbox"> Butter – 2 tbsp</label></li>
+    </ul>
+
+    <h3>Meat &amp; Seafood</h3>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> Boneless, skinless chicken breasts – 2 (7 oz each)</label></li>
+      <li><label><input type="checkbox"> Chicken breasts (for roasting) – 2 (if not using previous batch)</label></li>
+      <li><label><input type="checkbox"> Chicken thighs – 4</label></li>
+      <li><label><input type="checkbox"> Cod fillets – 2 (≈6 oz each)</label></li>
+      <li><label><input type="checkbox"> Large shrimp – 12, peeled and deveined</label></li>
+    </ul>
+
+    <h3>Grains &amp; Dry Goods</h3>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> Farro – 1 cup</label></li>
+      <li><label><input type="checkbox"> Bulgur wheat – 1 cup</label></li>
+      <li><label><input type="checkbox"> Rolled oats – 1 cup</label></li>
+      <li><label><input type="checkbox"> Whole-grain couscous – 1 cup</label></li>
+      <li><label><input type="checkbox"> Whole-grain bread – 1 loaf or at least 6 slices</label></li>
+      <li><label><input type="checkbox"> Granola – ½ cup</label></li>
+      <li><label><input type="checkbox"> Whole-grain pita bread – 4 pieces</label></li>
+    </ul>
+
+    <h3>Canned &amp; Jarred</h3>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> Diced tomatoes – 2 cans (14.5 oz each)</label></li>
+      <li><label><input type="checkbox"> Chickpeas – 1 can</label></li>
+    </ul>
+
+    <h3>Spices, Condiments &amp; Oils</h3>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> Extra-virgin olive oil</label></li>
+      <li><label><input type="checkbox"> Honey – small jar</label></li>
+      <li><label><input type="checkbox"> Vinegar (for poaching eggs)</label></li>
+      <li><label><input type="checkbox"> Salt &amp; pepper</label></li>
+      <li><label><input type="checkbox"> Ground cumin – 1 tsp</label></li>
+      <li><label><input type="checkbox"> Ground cinnamon – ½ tsp</label></li>
+      <li><label><input type="checkbox"> Turmeric – ¼ tsp</label></li>
+      <li><label><input type="checkbox"> Smoked paprika – ½ tsp</label></li>
+      <li><label><input type="checkbox"> Red pepper flakes (optional)</label></li>
+      <li><label><input type="checkbox"> Capers – 1 tbsp</label></li>
+      <li><label><input type="checkbox"> Kalamata olives – 1 cup total (for sauce and additional use)</label></li>
+    </ul>
+
+    <h3>Nuts &amp; Seeds</h3>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> Walnuts – ½ cup</label></li>
+      <li><label><input type="checkbox"> Mixed nuts – ½ cup</label></li>
+    </ul>
+
+    <h3>Other</h3>
+    <ul class="grocery-list">
+      <li><label><input type="checkbox"> Lemons – 4</label></li>
+      <li><label><input type="checkbox"> White wine – 1 small bottle (only a splash needed)</label></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Mediterranean Meal Plan</p>
+  </footer>
 </body>
 </html>
